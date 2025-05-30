@@ -43,4 +43,4 @@ php:
   methodArguments: infer-optional-args
   namespace: Midday\Midday
   outputModelSuffix: output
-  packageName: openapi/openapi
+  packageName: midday/midday-php

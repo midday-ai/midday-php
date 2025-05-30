@@ -1,21 +1,14 @@
-# openapi/openapi
+# midday/midday-php
 
-Developer-friendly & type-safe Php SDK specifically catered to leverage *openapi/openapi* API.
+Developer-friendly & type-safe Php SDK specifically catered to leverage *midday/midday-php* API.
 
 <div align="left">
-    <a href="https://www.speakeasy.com/?utm_source=openapi/openapi&utm_campaign=php"><img src="https://custom-icon-badges.demolab.com/badge/-Built%20By%20Speakeasy-212015?style=for-the-badge&logoColor=FBE331&logo=speakeasy&labelColor=545454" /></a>
+    <a href="https://www.speakeasy.com/?utm_source=midday/midday-php&utm_campaign=php"><img src="https://custom-icon-badges.demolab.com/badge/-Built%20By%20Speakeasy-212015?style=for-the-badge&logoColor=FBE331&logo=speakeasy&labelColor=545454" /></a>
     <a href="https://opensource.org/licenses/MIT">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="width: 100px; height: 28px;" />
     </a>
 </div>
 
-
-<br /><br />
-> [!IMPORTANT]
-> This SDK is not yet ready for production use. To complete setup please follow the steps outlined in your [workspace](https://app.speakeasy.com/org/midday/midday). Delete this section before > publishing to a package manager.
-
-<!-- Start Summary [summary] -->
-## Summary
 
 Midday API: Midday is a platform for Invoicing, Time tracking, File reconciliation, Storage, Financial Overview & your own Assistant.
 <!-- End Summary [summary] -->
@@ -23,7 +16,7 @@ Midday API: Midday is a platform for Invoicing, Time tracking, File reconciliati
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
 <!-- $toc-max-depth=2 -->
-* [openapi/openapi](#openapiopenapi)
+* [midday/midday-php](#openapiopenapi)
   * [SDK Installation](#sdk-installation)
   * [SDK Example Usage](#sdk-example-usage)
   * [Authentication](#authentication)
@@ -56,7 +49,7 @@ To install the SDK first add the below to your `composer.json` file:
         }
     ],
     "require": {
-        "openapi/openapi": "*"
+        "midday/midday-php": "*"
     }
 }
 ```
@@ -521,4 +514,4 @@ looking for the latest version.
 While we value open-source contributions to this SDK, this library is generated programmatically. Any manual changes added to internal files will be overwritten on the next generation. 
 We look forward to hearing your feedback. Feel free to open a PR or an issue with a proof of concept and we'll do our best to include it in a future release. 
 
-### SDK Created by [Speakeasy](https://www.speakeasy.com/?utm_source=openapi/openapi&utm_campaign=php)
+### SDK Created by [Speakeasy](https://www.speakeasy.com/?utm_source=midday/midday-php&utm_campaign=php)

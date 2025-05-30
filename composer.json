@@ -1,5 +1,5 @@
 {
-  "name": "openapi/openapi",
+  "name": "midday/midday-php",
   "type": "library",
   "autoload": {
     "psr-4": {
