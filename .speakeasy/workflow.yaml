@@ -10,6 +10,10 @@ targets:
     midday:
         target: php
         source: -OAS
+        publish:
+            packagist:
+                username: $packagist_username
+                token: $packagist_token
         codeSamples:
             registry:
                 location: registry.speakeasyapi.dev/midday/midday/-oas-php-code-samples
