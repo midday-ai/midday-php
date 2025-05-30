@@ -1,0 +1,11 @@
+# ProfitResultItem
+
+
+## Fields
+
+| Field                                                                      | Type                                                                       | Required                                                                   | Description                                                                | Example                                                                    |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `date`                                                                     | *string*                                                                   | :heavy_check_mark:                                                         | Date for the metric (ISO 8601)                                             | 2023-01-31                                                                 |
+| `precentage`                                                               | [Components\ProfitPercentage](../../Models/Components/ProfitPercentage.md) | :heavy_check_mark:                                                         | N/A                                                                        |                                                                            |
+| `current`                                                                  | [Components\ProfitCurrent](../../Models/Components/ProfitCurrent.md)       | :heavy_check_mark:                                                         | N/A                                                                        |                                                                            |
+| `previous`                                                                 | [Components\ProfitPrevious](../../Models/Components/ProfitPrevious.md)     | :heavy_check_mark:                                                         | N/A                                                                        |                                                                            |

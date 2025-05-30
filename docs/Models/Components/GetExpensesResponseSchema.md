@@ -1,0 +1,10 @@
+# GetExpensesResponseSchema
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `summary`                                                                                            | [Components\Summary](../../Models/Components/Summary.md)                                             | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `meta`                                                                                               | [Components\GetExpensesResponseSchemaMeta](../../Models/Components/GetExpensesResponseSchemaMeta.md) | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `result`                                                                                             | array<[Components\ExpensesResultArray](../../Models/Components/ExpensesResultArray.md)>              | :heavy_check_mark:                                                                                   | N/A                                                                                                  |

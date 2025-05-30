@@ -1,0 +1,9 @@
+# TrackerProjectsResponse
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `meta`                                                                                           | [Components\TrackerProjectsResponseMeta](../../Models/Components/TrackerProjectsResponseMeta.md) | :heavy_check_mark:                                                                               | Pagination metadata for the projects response                                                    |
+| `data`                                                                                           | array<[Components\TrackerProjectResponse](../../Models/Components/TrackerProjectResponse.md)>    | :heavy_check_mark:                                                                               | Array of tracker projects matching the query criteria                                            |
