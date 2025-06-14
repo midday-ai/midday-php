@@ -77,6 +77,14 @@ class TransactionResponse
     public Account $account;
 
     /**
+     * Name of the counterparty
+     *
+     * @var ?string $counterpartyName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('counterpartyName')]
+    public ?string $counterpartyName;
+
+    /**
      * Category information assigned to the transaction for organization
      *
      * @var ?Category $category
@@ -152,6 +160,7 @@ class TransactionResponse
      * @param  string  $status
      * @param  bool  $isFulfilled
      * @param  Account  $account
+     * @param  ?string  $counterpartyName
      * @param  ?Category  $category
      * @param  ?bool  $internal
      * @param  ?bool  $recurring
@@ -162,7 +171,7 @@ class TransactionResponse
      * @param  ?array<Attachment>  $attachments
      * @phpstan-pure
      */
-    public function __construct(string $id, string $name, float $amount, string $currency, string $date, string $status, bool $isFulfilled, Account $account, ?Category $category = null, ?bool $internal = null, ?bool $recurring = null, ?bool $manual = null, ?string $frequency = null, ?string $note = null, ?array $tags = null, ?array $attachments = null)
+    public function __construct(string $id, string $name, float $amount, string $currency, string $date, string $status, bool $isFulfilled, Account $account, ?string $counterpartyName = null, ?Category $category = null, ?bool $internal = null, ?bool $recurring = null, ?bool $manual = null, ?string $frequency = null, ?string $note = null, ?array $tags = null, ?array $attachments = null)
     {
         $this->id = $id;
         $this->name = $name;
@@ -172,6 +181,7 @@ class TransactionResponse
         $this->status = $status;
         $this->isFulfilled = $isFulfilled;
         $this->account = $account;
+        $this->counterpartyName = $counterpartyName;
         $this->category = $category;
         $this->internal = $internal;
         $this->recurring = $recurring;
