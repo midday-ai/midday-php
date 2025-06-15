@@ -121,6 +121,7 @@ $requestBody = new Operations\UpdateTeamByIdRequestBody(
     email: 'team@acme.com',
     logoUrl: 'https://cdn.midday.ai/logos/acme-corp.png',
     baseCurrency: 'USD',
+    countryCode: 'US',
 );
 
 $response = $sdk->teams->update(
