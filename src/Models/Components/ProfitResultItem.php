@@ -21,11 +21,11 @@ class ProfitResultItem
 
     /**
      *
-     * @var ProfitPercentage $precentage
+     * @var ProfitPercentage $percentage
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('precentage')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('percentage')]
     #[\Speakeasy\Serializer\Annotation\Type('\Midday\Midday\Models\Components\ProfitPercentage')]
-    public ProfitPercentage $precentage;
+    public ProfitPercentage $percentage;
 
     /**
      *
@@ -45,15 +45,15 @@ class ProfitResultItem
 
     /**
      * @param  string  $date
-     * @param  ProfitPercentage  $precentage
+     * @param  ProfitPercentage  $percentage
      * @param  ProfitCurrent  $current
      * @param  ProfitPrevious  $previous
      * @phpstan-pure
      */
-    public function __construct(string $date, ProfitPercentage $precentage, ProfitCurrent $current, ProfitPrevious $previous)
+    public function __construct(string $date, ProfitPercentage $percentage, ProfitCurrent $current, ProfitPrevious $previous)
     {
         $this->date = $date;
-        $this->precentage = $precentage;
+        $this->percentage = $percentage;
         $this->current = $current;
         $this->previous = $previous;
     }

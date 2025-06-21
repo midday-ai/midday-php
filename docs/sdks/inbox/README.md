@@ -22,7 +22,6 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
-use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
@@ -30,7 +29,7 @@ $sdk = Midday\Midday::builder()
     )
     ->build();
 
-$request = new Operations\ListInboxItemsRequest();
+
 
 $response = $sdk->inbox->list(
     request: $request
@@ -169,9 +168,7 @@ $sdk = Midday\Midday::builder()
     )
     ->build();
 
-$requestBody = new Operations\UpdateInboxItemRequestBody(
-    status: Operations\UpdateInboxItemStatus::Archived,
-);
+$requestBody = new Operations\UpdateInboxItemRequestBody();
 
 $response = $sdk->inbox->update(
     id: '<id>',
