@@ -44,8 +44,6 @@ class Midday
 
     public TrackerEntries $trackerEntries;
 
-    public Tracker $tracker;
-
     /**
      * Returns a new instance of the SDK builder used to configure and create the SDK instance.
      *
@@ -75,7 +73,6 @@ class Midday
         $this->metrics = new Metrics($this->sdkConfiguration);
         $this->trackerProjects = new TrackerProjects($this->sdkConfiguration);
         $this->trackerEntries = new TrackerEntries($this->sdkConfiguration);
-        $this->tracker = new Tracker($this->sdkConfiguration);
         $this->initHooks();
 
     }
