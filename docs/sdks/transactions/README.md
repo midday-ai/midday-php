@@ -117,7 +117,6 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
-use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
@@ -125,13 +124,7 @@ $sdk = Midday\Midday::builder()
     )
     ->build();
 
-$request = new Operations\CreateTransactionRequest(
-    name: '<value>',
-    amount: 5744.12,
-    currency: 'Forint',
-    date: '2024-01-12',
-    bankAccountId: '<id>',
-);
+
 
 $response = $sdk->transactions->create(
     request: $request
@@ -262,7 +255,6 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
-use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
@@ -270,7 +262,7 @@ $sdk = Midday\Midday::builder()
     )
     ->build();
 
-$requestBody = new Operations\UpdateTransactionRequestBody();
+
 
 $response = $sdk->transactions->update(
     id: 'f0c1d0ef-5679-4c1b-9698-2c64e97e8c1d',
@@ -312,7 +304,6 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
-use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
@@ -320,15 +311,7 @@ $sdk = Midday\Midday::builder()
     )
     ->build();
 
-$request = [
-    new Operations\RequestBody(
-        name: '<value>',
-        amount: 6684.51,
-        currency: 'Libyan Dinar',
-        date: '2024-05-10',
-        bankAccountId: '<id>',
-    ),
-];
+
 
 $response = $sdk->transactions->createMany(
     request: $request
@@ -374,9 +357,7 @@ $sdk = Midday\Midday::builder()
     )
     ->build();
 
-$request = [
-    'cc0db9ee-175c-4562-914a-20c38d2dc310',
-];
+
 
 $response = $sdk->transactions->deleteMany(
     request: $request
@@ -415,7 +396,6 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
-use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
@@ -423,11 +403,7 @@ $sdk = Midday\Midday::builder()
     )
     ->build();
 
-$request = new Operations\UpdateTransactionsRequest(
-    ids: [
-        '<value>',
-    ],
-);
+
 
 $response = $sdk->transactions->updateMany(
     request: $request
