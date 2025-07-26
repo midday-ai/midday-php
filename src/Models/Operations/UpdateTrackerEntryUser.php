@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Midday\Midday\Models\Operations;
 
 
-/** User - User information for the person who created this tracker entry */
-class User
+/** UpdateTrackerEntryUser - User information for the person who created this tracker entry */
+class UpdateTrackerEntryUser
 {
     /**
      * Unique identifier of the user

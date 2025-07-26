@@ -33,8 +33,6 @@ $sdk = Midday\Midday::builder()
 
 
 $response = $sdk->bankAccounts->list(
-    enabled: false,
-    manual: false
 
 );
 

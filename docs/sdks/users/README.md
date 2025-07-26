@@ -76,6 +76,7 @@ $request = new Operations\UpdateCurrentUserRequest(
     locale: 'en-US',
     weekStartsOnMonday: true,
     timezone: 'America/New_York',
+    timezoneAutoSync: true,
     timeFormat: 24,
     dateFormat: Operations\DateFormatRequest::YyyyDashMMDashdd,
 );
