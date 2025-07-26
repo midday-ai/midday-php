@@ -98,23 +98,8 @@ $sdk = Midday\Midday::builder()
     ->build();
 
 $request = new Operations\CreateTrackerProjectRequest(
-    name: 'Website Redesign',
-    description: 'Complete redesign of the company website with modern UI/UX and improved performance',
-    estimate: 120,
-    rate: 75,
-    currency: 'USD',
-    status: Operations\CreateTrackerProjectStatus::InProgress,
-    customerId: 'a1b2c3d4-e5f6-7890-abcd-1234567890ef',
-    tags: [
-        new Operations\CreateTrackerProjectTag(
-            id: 'f1e2d3c4-b5a6-7890-1234-567890abcdef',
-            value: 'Design',
-        ),
-        new Operations\CreateTrackerProjectTag(
-            id: 'e2d3c4b5-a6f1-7890-1234-567890abcdef',
-            value: 'Frontend',
-        ),
-    ],
+    name: 'New Project',
+    billable: true,
 );
 
 $response = $sdk->trackerProjects->create(
@@ -258,6 +243,7 @@ $requestBody = new Operations\UpdateTrackerProjectRequestBody(
     name: 'Website Redesign',
     description: 'Complete redesign of the company website with modern UI/UX and improved performance',
     estimate: 120,
+    billable: true,
     rate: 75,
     currency: 'USD',
     status: Operations\UpdateTrackerProjectStatus::InProgress,
