@@ -78,20 +78,20 @@ class Result
     /**
      * User information for the person who created this tracker entry
      *
-     * @var User $user
+     * @var ListTrackerEntriesUser $user
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('user')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Midday\Midday\Models\Operations\User')]
-    public User $user;
+    #[\Speakeasy\Serializer\Annotation\Type('\Midday\Midday\Models\Operations\ListTrackerEntriesUser')]
+    public ListTrackerEntriesUser $user;
 
     /**
      * Project information associated with this tracker entry
      *
-     * @var Project $project
+     * @var ListTrackerEntriesProject $project
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('project')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Midday\Midday\Models\Operations\Project')]
-    public Project $project;
+    #[\Speakeasy\Serializer\Annotation\Type('\Midday\Midday\Models\Operations\ListTrackerEntriesProject')]
+    public ListTrackerEntriesProject $project;
 
     /**
      * Description or notes for the tracker entry
@@ -126,14 +126,14 @@ class Result
      * @param  string  $teamId
      * @param  bool  $billed
      * @param  string  $date
-     * @param  User  $user
-     * @param  Project  $project
+     * @param  ListTrackerEntriesUser  $user
+     * @param  ListTrackerEntriesProject  $project
      * @param  ?string  $description
      * @param  ?float  $rate
      * @param  ?string  $currency
      * @phpstan-pure
      */
-    public function __construct(string $id, string $createdAt, float $duration, string $start, string $stop, string $teamId, bool $billed, string $date, User $user, Project $project, ?string $description = null, ?float $rate = null, ?string $currency = null)
+    public function __construct(string $id, string $createdAt, float $duration, string $start, string $stop, string $teamId, bool $billed, string $date, ListTrackerEntriesUser $user, ListTrackerEntriesProject $project, ?string $description = null, ?float $rate = null, ?string $currency = null)
     {
         $this->id = $id;
         $this->createdAt = $createdAt;

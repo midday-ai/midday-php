@@ -17,6 +17,7 @@ List all tracker projects for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listTrackerProjects" method="get" path="/tracker-projects" -->
 ```php
 declare(strict_types=1);
 
@@ -83,6 +84,7 @@ Create a tracker project for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createTrackerProject" method="post" path="/tracker-projects" -->
 ```php
 declare(strict_types=1);
 
@@ -98,23 +100,8 @@ $sdk = Midday\Midday::builder()
     ->build();
 
 $request = new Operations\CreateTrackerProjectRequest(
-    name: 'Website Redesign',
-    description: 'Complete redesign of the company website with modern UI/UX and improved performance',
-    estimate: 120,
-    rate: 75,
-    currency: 'USD',
-    status: Operations\CreateTrackerProjectStatus::InProgress,
-    customerId: 'a1b2c3d4-e5f6-7890-abcd-1234567890ef',
-    tags: [
-        new Operations\CreateTrackerProjectTag(
-            id: 'f1e2d3c4-b5a6-7890-1234-567890abcdef',
-            value: 'Design',
-        ),
-        new Operations\CreateTrackerProjectTag(
-            id: 'e2d3c4b5-a6f1-7890-1234-567890abcdef',
-            value: 'Frontend',
-        ),
-    ],
+    name: 'New Project',
+    billable: true,
 );
 
 $response = $sdk->trackerProjects->create(
@@ -148,6 +135,7 @@ Retrieve a tracker project for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getTrackerProjectById" method="get" path="/tracker-projects/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -194,6 +182,7 @@ Delete a tracker project for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="deleteTrackerProject" method="delete" path="/tracker-projects/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -240,6 +229,7 @@ Update a tracker project for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateTrackerProject" method="patch" path="/tracker-projects/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -258,6 +248,7 @@ $requestBody = new Operations\UpdateTrackerProjectRequestBody(
     name: 'Website Redesign',
     description: 'Complete redesign of the company website with modern UI/UX and improved performance',
     estimate: 120,
+    billable: true,
     rate: 75,
     currency: 'USD',
     status: Operations\UpdateTrackerProjectStatus::InProgress,
