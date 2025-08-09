@@ -17,6 +17,7 @@ Retrieve a list of customers for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCustomers" method="get" path="/customers" -->
 ```php
 declare(strict_types=1);
 
@@ -73,6 +74,7 @@ Create a new customer for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCustomer" method="post" path="/customers" -->
 ```php
 declare(strict_types=1);
 
@@ -91,6 +93,7 @@ $request = new Operations\CreateCustomerRequest(
     id: 'b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4',
     name: 'Acme Corporation',
     email: 'contact@acme.com',
+    billingEmail: 'finance@acme.com',
     country: 'United States',
     addressLine1: '123 Main Street',
     addressLine2: 'Suite 400',
@@ -146,6 +149,7 @@ Retrieve a customer by ID for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCustomerById" method="get" path="/customers/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -192,6 +196,7 @@ Delete a customer by ID for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="deleteCustomer" method="delete" path="/customers/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,6 +243,7 @@ Update a customer by ID for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCustomer" method="patch" path="/customers/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -256,6 +262,7 @@ $requestBody = new Operations\UpdateCustomerRequestBody(
     id: 'b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4',
     name: 'Acme Corporation',
     email: 'contact@acme.com',
+    billingEmail: 'finance@acme.com',
     country: 'United States',
     addressLine1: '123 Main Street',
     addressLine2: 'Suite 400',

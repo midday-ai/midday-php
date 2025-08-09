@@ -16,6 +16,7 @@ Retrieve a list of teams for the authenticated user.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listTeams" method="get" path="/teams" -->
 ```php
 declare(strict_types=1);
 
@@ -56,6 +57,7 @@ Retrieve a team by its ID for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getTeamById" method="get" path="/teams/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -102,6 +104,7 @@ Update a team for the authenticated workspace. If there’s no change, returns i
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateTeamById" method="patch" path="/teams/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -121,6 +124,7 @@ $requestBody = new Operations\UpdateTeamByIdRequestBody(
     email: 'team@acme.com',
     logoUrl: 'https://cdn.midday.ai/logos/acme-corp.png',
     baseCurrency: 'USD',
+    countryCode: 'US',
 );
 
 $response = $sdk->teams->update(
@@ -157,6 +161,7 @@ List all team members for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listTeamMembers" method="get" path="/teams/{id}/members" -->
 ```php
 declare(strict_types=1);
 
