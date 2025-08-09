@@ -17,6 +17,7 @@ Retrieve a list of tags for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listTags" method="get" path="/tags" -->
 ```php
 declare(strict_types=1);
 
@@ -57,6 +58,7 @@ Create a new tag for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createTag" method="post" path="/tags" -->
 ```php
 declare(strict_types=1);
 
@@ -106,6 +108,7 @@ Retrieve a tag by ID for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getTagById" method="get" path="/tags/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -152,6 +155,7 @@ Delete a tag by ID for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="deleteTag" method="delete" path="/tags/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -198,6 +202,7 @@ Update a tag by ID for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateTag" method="patch" path="/tags/{id}" -->
 ```php
 declare(strict_types=1);
 
