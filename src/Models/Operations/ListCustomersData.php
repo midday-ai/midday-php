@@ -77,6 +77,14 @@ class ListCustomersData
     public array $tags;
 
     /**
+     * Billing email address of the customer
+     *
+     * @var ?string $billingEmail
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('billingEmail')]
+    public ?string $billingEmail;
+
+    /**
      * Primary phone number of the customer
      *
      * @var ?string $phone
@@ -181,6 +189,7 @@ class ListCustomersData
      * @param  float  $invoiceCount
      * @param  float  $projectCount
      * @param  array<ListCustomersTag>  $tags
+     * @param  ?string  $billingEmail
      * @param  ?string  $phone
      * @param  ?string  $website
      * @param  ?string  $country
@@ -195,7 +204,7 @@ class ListCustomersData
      * @param  ?string  $contact
      * @phpstan-pure
      */
-    public function __construct(string $id, string $name, string $email, string $createdAt, string $token, float $invoiceCount, float $projectCount, array $tags, ?string $phone = null, ?string $website = null, ?string $country = null, ?string $addressLine1 = null, ?string $addressLine2 = null, ?string $city = null, ?string $state = null, ?string $zip = null, ?string $note = null, ?string $vatNumber = null, ?string $countryCode = null, ?string $contact = null)
+    public function __construct(string $id, string $name, string $email, string $createdAt, string $token, float $invoiceCount, float $projectCount, array $tags, ?string $billingEmail = null, ?string $phone = null, ?string $website = null, ?string $country = null, ?string $addressLine1 = null, ?string $addressLine2 = null, ?string $city = null, ?string $state = null, ?string $zip = null, ?string $note = null, ?string $vatNumber = null, ?string $countryCode = null, ?string $contact = null)
     {
         $this->id = $id;
         $this->name = $name;
@@ -205,6 +214,7 @@ class ListCustomersData
         $this->invoiceCount = $invoiceCount;
         $this->projectCount = $projectCount;
         $this->tags = $tags;
+        $this->billingEmail = $billingEmail;
         $this->phone = $phone;
         $this->website = $website;
         $this->country = $country;

@@ -17,13 +17,18 @@ generation:
     oAuth2ClientCredentialsEnabled: true
     oAuth2PasswordEnabled: true
   sdkHooksConfigAccess: true
+  tests:
+    generateTests: true
+    generateNewTests: false
+    skipResponseBodyAssertions: false
 php:
-  version: 0.0.1
+  version: 0.0.2
   additionalDependencies:
     autoload: {}
     autoload-dev: {}
     require: {}
     require-dev: {}
+  baseErrorName: MiddayException
   clientServerStatusCodesAsErrors: true
   defaultErrorName: APIException
   flattenGlobalSecurity: true

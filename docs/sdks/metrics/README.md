@@ -18,6 +18,7 @@ Revenue metrics for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getRevenueMetrics" method="get" path="/metrics/revenue" -->
 ```php
 declare(strict_types=1);
 
@@ -69,6 +70,7 @@ Profit metrics for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getProfitMetrics" method="get" path="/metrics/profit" -->
 ```php
 declare(strict_types=1);
 
@@ -120,6 +122,7 @@ Burn rate metrics for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getBurnRateMetrics" method="get" path="/metrics/burn-rate" -->
 ```php
 declare(strict_types=1);
 
@@ -171,6 +174,7 @@ Runway metrics for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getRunwayMetrics" method="get" path="/metrics/runway" -->
 ```php
 declare(strict_types=1);
 
@@ -222,6 +226,7 @@ Expense metrics for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getExpensesMetrics" method="get" path="/metrics/expenses" -->
 ```php
 declare(strict_types=1);
 
@@ -273,6 +278,7 @@ Spending metrics for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getSpendingMetrics" method="get" path="/metrics/spending" -->
 ```php
 declare(strict_types=1);
 
