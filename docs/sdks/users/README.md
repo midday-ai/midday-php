@@ -14,6 +14,7 @@ Retrieve the current user for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCurrentUser" method="get" path="/users/me" -->
 ```php
 declare(strict_types=1);
 
@@ -54,6 +55,7 @@ Update the current user for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCurrentUser" method="patch" path="/users/me" -->
 ```php
 declare(strict_types=1);
 
@@ -76,6 +78,7 @@ $request = new Operations\UpdateCurrentUserRequest(
     locale: 'en-US',
     weekStartsOnMonday: true,
     timezone: 'America/New_York',
+    timezoneAutoSync: true,
     timeFormat: 24,
     dateFormat: Operations\DateFormatRequest::YyyyDashMMDashdd,
 );

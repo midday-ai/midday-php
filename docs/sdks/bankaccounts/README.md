@@ -17,6 +17,7 @@ Retrieve a list of bank accounts for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listBankAccounts" method="get" path="/bank-accounts" -->
 ```php
 declare(strict_types=1);
 
@@ -33,8 +34,6 @@ $sdk = Midday\Midday::builder()
 
 
 $response = $sdk->bankAccounts->list(
-    enabled: false,
-    manual: false
 
 );
 
@@ -66,6 +65,7 @@ Create a new bank account for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createBankAccount" method="post" path="/bank-accounts" -->
 ```php
 declare(strict_types=1);
 
@@ -117,6 +117,7 @@ Retrieve a bank account by ID for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getBankAccountById" method="get" path="/bank-accounts/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -163,6 +164,7 @@ Delete a bank account by ID for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="deleteBankAccount" method="delete" path="/bank-accounts/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -209,6 +211,7 @@ Update a bank account by ID for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateBankAccount" method="patch" path="/bank-accounts/{id}" -->
 ```php
 declare(strict_types=1);
 

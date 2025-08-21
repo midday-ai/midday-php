@@ -13,6 +13,7 @@ Search across all data, invoices, documents, customers, transactions, and more.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="search" method="get" path="/search" -->
 ```php
 declare(strict_types=1);
 

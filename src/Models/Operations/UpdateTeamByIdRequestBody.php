@@ -48,17 +48,28 @@ class UpdateTeamByIdRequestBody
     public ?string $baseCurrency = null;
 
     /**
+     * Country code for the team
+     *
+     * @var ?string $countryCode
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('countryCode')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $countryCode = null;
+
+    /**
      * @param  ?string  $name
      * @param  ?string  $email
      * @param  ?string  $logoUrl
      * @param  ?string  $baseCurrency
+     * @param  ?string  $countryCode
      * @phpstan-pure
      */
-    public function __construct(?string $name = null, ?string $email = null, ?string $logoUrl = null, ?string $baseCurrency = null)
+    public function __construct(?string $name = null, ?string $email = null, ?string $logoUrl = null, ?string $baseCurrency = null, ?string $countryCode = null)
     {
         $this->name = $name;
         $this->email = $email;
         $this->logoUrl = $logoUrl;
         $this->baseCurrency = $baseCurrency;
+        $this->countryCode = $countryCode;
     }
 }

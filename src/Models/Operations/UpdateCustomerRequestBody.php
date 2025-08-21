@@ -47,6 +47,15 @@ class UpdateCustomerRequestBody
     public ?array $tags = null;
 
     /**
+     * Billing email address of the customer
+     *
+     * @var ?string $billingEmail
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('billingEmail')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $billingEmail = null;
+
+    /**
      * Country name where the customer is located
      *
      * @var ?string $country
@@ -159,6 +168,7 @@ class UpdateCustomerRequestBody
      * @param  string  $email
      * @param  ?string  $id
      * @param  ?array<UpdateCustomerTagRequest>  $tags
+     * @param  ?string  $billingEmail
      * @param  ?string  $country
      * @param  ?string  $addressLine1
      * @param  ?string  $addressLine2
@@ -173,12 +183,13 @@ class UpdateCustomerRequestBody
      * @param  ?string  $contact
      * @phpstan-pure
      */
-    public function __construct(string $name, string $email, ?string $id = null, ?array $tags = null, ?string $country = null, ?string $addressLine1 = null, ?string $addressLine2 = null, ?string $city = null, ?string $state = null, ?string $zip = null, ?string $phone = null, ?string $website = null, ?string $note = null, ?string $vatNumber = null, ?string $countryCode = null, ?string $contact = null)
+    public function __construct(string $name, string $email, ?string $id = null, ?array $tags = null, ?string $billingEmail = null, ?string $country = null, ?string $addressLine1 = null, ?string $addressLine2 = null, ?string $city = null, ?string $state = null, ?string $zip = null, ?string $phone = null, ?string $website = null, ?string $note = null, ?string $vatNumber = null, ?string $countryCode = null, ?string $contact = null)
     {
         $this->name = $name;
         $this->email = $email;
         $this->id = $id;
         $this->tags = $tags;
+        $this->billingEmail = $billingEmail;
         $this->country = $country;
         $this->addressLine1 = $addressLine1;
         $this->addressLine2 = $addressLine2;

@@ -15,13 +15,12 @@ Learn more about the Midday PHP SDK in the [official documentation](https://docs
 <!-- Start Summary [summary] -->
 ## Summary
 
-Midday is a platform for Invoicing, Time tracking, File reconciliation, Storage, Financial Overview & your own Assistant.
+Midday API: Midday is a platform for Invoicing, Time tracking, File reconciliation, Storage, Financial Overview & your own Assistant.
 <!-- End Summary [summary] -->
 
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
 <!-- $toc-max-depth=2 -->
-* [midday/midday-php](#openapiopenapi)
   * [SDK Installation](#sdk-installation)
   * [SDK Example Usage](#sdk-example-usage)
   * [Authentication](#authentication)
@@ -37,32 +36,11 @@ Midday is a platform for Invoicing, Time tracking, File reconciliation, Storage,
 <!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
-> [!TIP]
-> To finish publishing your SDK you must [run your first generation action](https://www.speakeasy.com/docs/github-setup#step-by-step-guide).
-
-
 The SDK relies on [Composer](https://getcomposer.org/) to manage its dependencies.
 
-To install the SDK first add the below to your `composer.json` file:
-
-```json
-{
-    "repositories": [
-        {
-            "type": "github",
-            "url": "<UNSET>.git"
-        }
-    ],
-    "require": {
-        "midday/midday-php": "*"
-    }
-}
-```
-
-Then run the following command:
-
+To install the SDK and add it as a dependency to an existing `composer.json` file:
 ```bash
-composer update
+composer require "midday/midday-php"
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -295,13 +273,13 @@ if ($response->object !== null) {
 * [update](docs/sdks/teams/README.md#update) - Update a team
 * [members](docs/sdks/teams/README.md#members) - List all team members
 
-### [tracker](docs/sdks/tracker/README.md)
-
-* [delete](docs/sdks/tracker/README.md#delete) - Delete a tracker entry
-
 ### [trackerEntries](docs/sdks/trackerentries/README.md)
 
 * [list](docs/sdks/trackerentries/README.md#list) - List all tracker entries
+* [create](docs/sdks/trackerentries/README.md#create) - Create a tracker entry
+* [createBulk](docs/sdks/trackerentries/README.md#createbulk) - Create multiple tracker entries
+* [delete](docs/sdks/trackerentries/README.md#delete) - Delete a tracker entry
+* [update](docs/sdks/trackerentries/README.md#update) - Update a tracker entry
 
 ### [trackerProjects](docs/sdks/trackerprojects/README.md)
 
@@ -310,6 +288,13 @@ if ($response->object !== null) {
 * [get](docs/sdks/trackerprojects/README.md#get) - Retrieve a tracker project
 * [delete](docs/sdks/trackerprojects/README.md#delete) - Delete a tracker project
 * [update](docs/sdks/trackerprojects/README.md#update) - Update a tracker project
+
+### [trackerTimer](docs/sdks/trackertimer/README.md)
+
+* [startTimer](docs/sdks/trackertimer/README.md#starttimer) - Start a timer
+* [stopTimer](docs/sdks/trackertimer/README.md#stoptimer) - Stop a timer
+* [getCurrentTimer](docs/sdks/trackertimer/README.md#getcurrenttimer) - Get current timer
+* [getTimerStatus](docs/sdks/trackertimer/README.md#gettimerstatus) - Get timer status
 
 ### [transactions](docs/sdks/transactions/README.md)
 

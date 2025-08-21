@@ -45,17 +45,37 @@ class Category
     public string $slug;
 
     /**
+     * Tax rate of the category
+     *
+     * @var ?float $taxRate
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('taxRate')]
+    public ?float $taxRate;
+
+    /**
+     * Tax type of the category
+     *
+     * @var ?string $taxType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('taxType')]
+    public ?string $taxType;
+
+    /**
      * @param  string  $id
      * @param  string  $name
      * @param  string  $color
      * @param  string  $slug
+     * @param  ?float  $taxRate
+     * @param  ?string  $taxType
      * @phpstan-pure
      */
-    public function __construct(string $id, string $name, string $color, string $slug)
+    public function __construct(string $id, string $name, string $color, string $slug, ?float $taxRate = null, ?string $taxType = null)
     {
         $this->id = $id;
         $this->name = $name;
         $this->color = $color;
         $this->slug = $slug;
+        $this->taxRate = $taxRate;
+        $this->taxType = $taxType;
     }
 }

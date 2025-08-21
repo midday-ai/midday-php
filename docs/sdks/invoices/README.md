@@ -17,6 +17,7 @@ Retrieve a list of invoices for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listInvoices" method="get" path="/invoices" -->
 ```php
 declare(strict_types=1);
 
@@ -82,6 +83,7 @@ Get payment status for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="get_/invoices/payment-status" method="get" path="/invoices/payment-status" -->
 ```php
 declare(strict_types=1);
 
@@ -122,6 +124,7 @@ Get summary of invoices for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getInvoiceSummary" method="get" path="/invoices/summary" -->
 ```php
 declare(strict_types=1);
 
@@ -169,6 +172,7 @@ Retrieve a invoice by its unique identifier for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getInvoiceById" method="get" path="/invoices/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -215,6 +219,7 @@ Delete an invoice by its unique identifier for the authenticated team. Only invo
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="deleteInvoice" method="delete" path="/invoices/{id}" -->
 ```php
 declare(strict_types=1);
 
