@@ -1,18 +1,21 @@
 lockVersion: 2.0.0
 id: 9afefabe-3857-46d4-b54b-d468fd10a25d
 management:
-  docChecksum: 43aa22c88b2565b587e5e225476ddc89
+  docChecksum: dd329bc0918b4bf1ae9f9d626db08cfb
   docVersion: 0.0.1
-  speakeasyVersion: 1.554.1
-  generationVersion: 2.616.1
-  releaseVersion: 0.0.1
-  configChecksum: c70b91b66963b732e8cbb31591109967
+  speakeasyVersion: 1.606.0
+  generationVersion: 2.686.7
+  releaseVersion: 0.0.2
+  configChecksum: 34c719766f1d388c89a3205c42248b65
+  repoURL: https://github.com/midday-ai/midday-php.git
+  installationURL: https://github.com/midday-ai/midday-php
+  published: true
 features:
   php:
     constsAndDefaults: 0.2.0
-    core: 3.8.5
+    core: 3.8.9
     enums: 2.81.1
-    examples: 2.81.5
+    examples: 2.81.6
     flattening: 2.81.1
     globalSecurity: 2.81.8
     globalSecurityFlattening: 0.1.2
@@ -76,6 +79,20 @@ generatedFiles:
   - docs/Models/Operations/CreateCustomerTagRequest.md
   - docs/Models/Operations/CreateCustomerTagResponse.md
   - docs/Models/Operations/CreateTagResponse.md
+  - docs/Models/Operations/CreateTrackerEntriesBulkCustomer.md
+  - docs/Models/Operations/CreateTrackerEntriesBulkData.md
+  - docs/Models/Operations/CreateTrackerEntriesBulkProject.md
+  - docs/Models/Operations/CreateTrackerEntriesBulkRequest.md
+  - docs/Models/Operations/CreateTrackerEntriesBulkResponse.md
+  - docs/Models/Operations/CreateTrackerEntriesBulkResponseBody.md
+  - docs/Models/Operations/CreateTrackerEntriesBulkUser.md
+  - docs/Models/Operations/CreateTrackerEntryCustomer.md
+  - docs/Models/Operations/CreateTrackerEntryData.md
+  - docs/Models/Operations/CreateTrackerEntryProject.md
+  - docs/Models/Operations/CreateTrackerEntryRequest.md
+  - docs/Models/Operations/CreateTrackerEntryResponse.md
+  - docs/Models/Operations/CreateTrackerEntryResponseBody.md
+  - docs/Models/Operations/CreateTrackerEntryUser.md
   - docs/Models/Operations/CreateTrackerProjectRequest.md
   - docs/Models/Operations/CreateTrackerProjectResponse.md
   - docs/Models/Operations/CreateTrackerProjectStatus.md
@@ -85,6 +102,7 @@ generatedFiles:
   - docs/Models/Operations/CreateTransactionResponse.md
   - docs/Models/Operations/CreateTransactionsAttachment.md
   - docs/Models/Operations/CreateTransactionsResponse.md
+  - docs/Models/Operations/CurrentEntry.md
   - docs/Models/Operations/DateFormatRequest.md
   - docs/Models/Operations/DeleteBankAccountRequest.md
   - docs/Models/Operations/DeleteBankAccountResponse.md
@@ -115,11 +133,19 @@ generatedFiles:
   - docs/Models/Operations/DeleteTransactionResponseBody.md
   - docs/Models/Operations/DeleteTransactionsResponse.md
   - docs/Models/Operations/DeleteTransactionsResponseBody.md
+  - docs/Models/Operations/Entry.md
   - docs/Models/Operations/GetBankAccountByIdRequest.md
   - docs/Models/Operations/GetBankAccountByIdResponse.md
   - docs/Models/Operations/GetBankAccountByIdResponseBody.md
   - docs/Models/Operations/GetBurnRateMetricsRequest.md
   - docs/Models/Operations/GetBurnRateMetricsResponse.md
+  - docs/Models/Operations/GetCurrentTimerCustomer.md
+  - docs/Models/Operations/GetCurrentTimerData.md
+  - docs/Models/Operations/GetCurrentTimerProject.md
+  - docs/Models/Operations/GetCurrentTimerRequest.md
+  - docs/Models/Operations/GetCurrentTimerResponse.md
+  - docs/Models/Operations/GetCurrentTimerResponseBody.md
+  - docs/Models/Operations/GetCurrentTimerUser.md
   - docs/Models/Operations/GetCurrentUserDateFormat.md
   - docs/Models/Operations/GetCurrentUserResponse.md
   - docs/Models/Operations/GetCurrentUserResponseBody.md
@@ -163,6 +189,10 @@ generatedFiles:
   - docs/Models/Operations/GetTeamByIdRequest.md
   - docs/Models/Operations/GetTeamByIdResponse.md
   - docs/Models/Operations/GetTeamByIdResponseBody.md
+  - docs/Models/Operations/GetTimerStatusData.md
+  - docs/Models/Operations/GetTimerStatusRequest.md
+  - docs/Models/Operations/GetTimerStatusResponse.md
+  - docs/Models/Operations/GetTimerStatusResponseBody.md
   - docs/Models/Operations/GetTrackerProjectByIdRequest.md
   - docs/Models/Operations/GetTrackerProjectByIdResponse.md
   - docs/Models/Operations/GetTransactionByIdRequest.md
@@ -208,9 +238,11 @@ generatedFiles:
   - docs/Models/Operations/ListTeamsResponseBody.md
   - docs/Models/Operations/ListTrackerEntriesCustomer.md
   - docs/Models/Operations/ListTrackerEntriesMeta.md
+  - docs/Models/Operations/ListTrackerEntriesProject.md
   - docs/Models/Operations/ListTrackerEntriesRequest.md
   - docs/Models/Operations/ListTrackerEntriesResponse.md
   - docs/Models/Operations/ListTrackerEntriesResponseBody.md
+  - docs/Models/Operations/ListTrackerEntriesUser.md
   - docs/Models/Operations/ListTrackerProjectsRequest.md
   - docs/Models/Operations/ListTrackerProjectsResponse.md
   - docs/Models/Operations/ListTrackerProjectsStatus.md
@@ -219,13 +251,27 @@ generatedFiles:
   - docs/Models/Operations/ListTransactionsResponse.md
   - docs/Models/Operations/ListTransactionsResponseBody.md
   - docs/Models/Operations/ListTransactionsType.md
-  - docs/Models/Operations/Project.md
   - docs/Models/Operations/RequestBody.md
   - docs/Models/Operations/Result.md
   - docs/Models/Operations/Role.md
   - docs/Models/Operations/SearchRequest.md
   - docs/Models/Operations/SearchResponse.md
   - docs/Models/Operations/SearchResponseBody.md
+  - docs/Models/Operations/StartTimerCustomer.md
+  - docs/Models/Operations/StartTimerData.md
+  - docs/Models/Operations/StartTimerProject.md
+  - docs/Models/Operations/StartTimerRequest.md
+  - docs/Models/Operations/StartTimerResponse.md
+  - docs/Models/Operations/StartTimerResponseBody.md
+  - docs/Models/Operations/StartTimerUser.md
+  - docs/Models/Operations/StopTimerCustomer.md
+  - docs/Models/Operations/StopTimerData.md
+  - docs/Models/Operations/StopTimerProject.md
+  - docs/Models/Operations/StopTimerRequest.md
+  - docs/Models/Operations/StopTimerResponse.md
+  - docs/Models/Operations/StopTimerResponseBody.md
+  - docs/Models/Operations/StopTimerUser.md
+  - docs/Models/Operations/TrackerProject.md
   - docs/Models/Operations/UpdateBankAccountRequest.md
   - docs/Models/Operations/UpdateBankAccountRequestBody.md
   - docs/Models/Operations/UpdateBankAccountResponse.md
@@ -256,6 +302,14 @@ generatedFiles:
   - docs/Models/Operations/UpdateTeamByIdRequestBody.md
   - docs/Models/Operations/UpdateTeamByIdResponse.md
   - docs/Models/Operations/UpdateTeamByIdResponseBody.md
+  - docs/Models/Operations/UpdateTrackerEntryCustomer.md
+  - docs/Models/Operations/UpdateTrackerEntryData.md
+  - docs/Models/Operations/UpdateTrackerEntryProject.md
+  - docs/Models/Operations/UpdateTrackerEntryRequest.md
+  - docs/Models/Operations/UpdateTrackerEntryRequestBody.md
+  - docs/Models/Operations/UpdateTrackerEntryResponse.md
+  - docs/Models/Operations/UpdateTrackerEntryResponseBody.md
+  - docs/Models/Operations/UpdateTrackerEntryUser.md
   - docs/Models/Operations/UpdateTrackerProjectRequest.md
   - docs/Models/Operations/UpdateTrackerProjectRequestBody.md
   - docs/Models/Operations/UpdateTrackerProjectResponse.md
@@ -272,7 +326,6 @@ generatedFiles:
   - docs/Models/Operations/UpdateTransactionsResponse.md
   - docs/Models/Operations/UpdateTransactionsResponseBody.md
   - docs/Models/Operations/UpdateTransactionsStatus.md
-  - docs/Models/Operations/User.md
   - docs/sdks/bankaccounts/README.md
   - docs/sdks/customers/README.md
   - docs/sdks/documents/README.md
@@ -283,9 +336,9 @@ generatedFiles:
   - docs/sdks/search/README.md
   - docs/sdks/tags/README.md
   - docs/sdks/teams/README.md
-  - docs/sdks/tracker/README.md
   - docs/sdks/trackerentries/README.md
   - docs/sdks/trackerprojects/README.md
+  - docs/sdks/trackertimer/README.md
   - docs/sdks/transactions/README.md
   - docs/sdks/users/README.md
   - phpstan.neon
@@ -367,6 +420,20 @@ generatedFiles:
   - src/Models/Operations/CreateCustomerTagRequest.php
   - src/Models/Operations/CreateCustomerTagResponse.php
   - src/Models/Operations/CreateTagResponse.php
+  - src/Models/Operations/CreateTrackerEntriesBulkCustomer.php
+  - src/Models/Operations/CreateTrackerEntriesBulkData.php
+  - src/Models/Operations/CreateTrackerEntriesBulkProject.php
+  - src/Models/Operations/CreateTrackerEntriesBulkRequest.php
+  - src/Models/Operations/CreateTrackerEntriesBulkResponse.php
+  - src/Models/Operations/CreateTrackerEntriesBulkResponseBody.php
+  - src/Models/Operations/CreateTrackerEntriesBulkUser.php
+  - src/Models/Operations/CreateTrackerEntryCustomer.php
+  - src/Models/Operations/CreateTrackerEntryData.php
+  - src/Models/Operations/CreateTrackerEntryProject.php
+  - src/Models/Operations/CreateTrackerEntryRequest.php
+  - src/Models/Operations/CreateTrackerEntryResponse.php
+  - src/Models/Operations/CreateTrackerEntryResponseBody.php
+  - src/Models/Operations/CreateTrackerEntryUser.php
   - src/Models/Operations/CreateTrackerProjectRequest.php
   - src/Models/Operations/CreateTrackerProjectResponse.php
   - src/Models/Operations/CreateTrackerProjectStatus.php
@@ -376,6 +443,7 @@ generatedFiles:
   - src/Models/Operations/CreateTransactionResponse.php
   - src/Models/Operations/CreateTransactionsAttachment.php
   - src/Models/Operations/CreateTransactionsResponse.php
+  - src/Models/Operations/CurrentEntry.php
   - src/Models/Operations/DateFormatRequest.php
   - src/Models/Operations/DeleteBankAccountRequest.php
   - src/Models/Operations/DeleteBankAccountResponse.php
@@ -406,11 +474,19 @@ generatedFiles:
   - src/Models/Operations/DeleteTransactionResponseBody.php
   - src/Models/Operations/DeleteTransactionsResponse.php
   - src/Models/Operations/DeleteTransactionsResponseBody.php
+  - src/Models/Operations/Entry.php
   - src/Models/Operations/GetBankAccountByIdRequest.php
   - src/Models/Operations/GetBankAccountByIdResponse.php
   - src/Models/Operations/GetBankAccountByIdResponseBody.php
   - src/Models/Operations/GetBurnRateMetricsRequest.php
   - src/Models/Operations/GetBurnRateMetricsResponse.php
+  - src/Models/Operations/GetCurrentTimerCustomer.php
+  - src/Models/Operations/GetCurrentTimerData.php
+  - src/Models/Operations/GetCurrentTimerProject.php
+  - src/Models/Operations/GetCurrentTimerRequest.php
+  - src/Models/Operations/GetCurrentTimerResponse.php
+  - src/Models/Operations/GetCurrentTimerResponseBody.php
+  - src/Models/Operations/GetCurrentTimerUser.php
   - src/Models/Operations/GetCurrentUserDateFormat.php
   - src/Models/Operations/GetCurrentUserResponse.php
   - src/Models/Operations/GetCurrentUserResponseBody.php
@@ -454,6 +530,10 @@ generatedFiles:
   - src/Models/Operations/GetTeamByIdRequest.php
   - src/Models/Operations/GetTeamByIdResponse.php
   - src/Models/Operations/GetTeamByIdResponseBody.php
+  - src/Models/Operations/GetTimerStatusData.php
+  - src/Models/Operations/GetTimerStatusRequest.php
+  - src/Models/Operations/GetTimerStatusResponse.php
+  - src/Models/Operations/GetTimerStatusResponseBody.php
   - src/Models/Operations/GetTrackerProjectByIdRequest.php
   - src/Models/Operations/GetTrackerProjectByIdResponse.php
   - src/Models/Operations/GetTransactionByIdRequest.php
@@ -499,9 +579,11 @@ generatedFiles:
   - src/Models/Operations/ListTeamsResponseBody.php
   - src/Models/Operations/ListTrackerEntriesCustomer.php
   - src/Models/Operations/ListTrackerEntriesMeta.php
+  - src/Models/Operations/ListTrackerEntriesProject.php
   - src/Models/Operations/ListTrackerEntriesRequest.php
   - src/Models/Operations/ListTrackerEntriesResponse.php
   - src/Models/Operations/ListTrackerEntriesResponseBody.php
+  - src/Models/Operations/ListTrackerEntriesUser.php
   - src/Models/Operations/ListTrackerProjectsRequest.php
   - src/Models/Operations/ListTrackerProjectsResponse.php
   - src/Models/Operations/ListTrackerProjectsStatus.php
@@ -510,13 +592,27 @@ generatedFiles:
   - src/Models/Operations/ListTransactionsResponse.php
   - src/Models/Operations/ListTransactionsResponseBody.php
   - src/Models/Operations/ListTransactionsType.php
-  - src/Models/Operations/Project.php
   - src/Models/Operations/RequestBody.php
   - src/Models/Operations/Result.php
   - src/Models/Operations/Role.php
   - src/Models/Operations/SearchRequest.php
   - src/Models/Operations/SearchResponse.php
   - src/Models/Operations/SearchResponseBody.php
+  - src/Models/Operations/StartTimerCustomer.php
+  - src/Models/Operations/StartTimerData.php
+  - src/Models/Operations/StartTimerProject.php
+  - src/Models/Operations/StartTimerRequest.php
+  - src/Models/Operations/StartTimerResponse.php
+  - src/Models/Operations/StartTimerResponseBody.php
+  - src/Models/Operations/StartTimerUser.php
+  - src/Models/Operations/StopTimerCustomer.php
+  - src/Models/Operations/StopTimerData.php
+  - src/Models/Operations/StopTimerProject.php
+  - src/Models/Operations/StopTimerRequest.php
+  - src/Models/Operations/StopTimerResponse.php
+  - src/Models/Operations/StopTimerResponseBody.php
+  - src/Models/Operations/StopTimerUser.php
+  - src/Models/Operations/TrackerProject.php
   - src/Models/Operations/UpdateBankAccountRequest.php
   - src/Models/Operations/UpdateBankAccountRequestBody.php
   - src/Models/Operations/UpdateBankAccountResponse.php
@@ -547,6 +643,14 @@ generatedFiles:
   - src/Models/Operations/UpdateTeamByIdRequestBody.php
   - src/Models/Operations/UpdateTeamByIdResponse.php
   - src/Models/Operations/UpdateTeamByIdResponseBody.php
+  - src/Models/Operations/UpdateTrackerEntryCustomer.php
+  - src/Models/Operations/UpdateTrackerEntryData.php
+  - src/Models/Operations/UpdateTrackerEntryProject.php
+  - src/Models/Operations/UpdateTrackerEntryRequest.php
+  - src/Models/Operations/UpdateTrackerEntryRequestBody.php
+  - src/Models/Operations/UpdateTrackerEntryResponse.php
+  - src/Models/Operations/UpdateTrackerEntryResponseBody.php
+  - src/Models/Operations/UpdateTrackerEntryUser.php
   - src/Models/Operations/UpdateTrackerProjectRequest.php
   - src/Models/Operations/UpdateTrackerProjectRequestBody.php
   - src/Models/Operations/UpdateTrackerProjectResponse.php
@@ -563,14 +667,13 @@ generatedFiles:
   - src/Models/Operations/UpdateTransactionsResponse.php
   - src/Models/Operations/UpdateTransactionsResponseBody.php
   - src/Models/Operations/UpdateTransactionsStatus.php
-  - src/Models/Operations/User.php
   - src/SDKConfiguration.php
   - src/Search.php
   - src/Tags.php
   - src/Teams.php
-  - src/Tracker.php
   - src/TrackerEntries.php
   - src/TrackerProjects.php
+  - src/TrackerTimer.php
   - src/Transactions.php
   - src/Users.php
   - src/Utils/BigDecimalHandler.php
@@ -631,12 +734,12 @@ examples:
           type: "expense"
       responses:
         "200":
-          application/json: {"meta": {"cursor": "eyJpZCI6IjQ1NiJ9", "hasPreviousPage": false, "hasNextPage": true}, "data": [{"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "currency": "USD", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}, {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "currency": "USD", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}, {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "currency": "USD", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}]}
+          application/json: {"meta": {"cursor": "eyJpZCI6IjQ1NiJ9", "hasPreviousPage": false, "hasNextPage": true}, "data": [{"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "taxAmount": 15.07, "taxRate": 10, "taxType": "VAT", "currency": "USD", "counterpartyName": "Spotify AB", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "taxRate": 10, "taxType": "VAT", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}, {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "taxAmount": 15.07, "taxRate": 10, "taxType": "VAT", "currency": "USD", "counterpartyName": "Spotify AB", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "taxRate": 10, "taxType": "VAT", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}, {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "taxAmount": 15.07, "taxRate": 10, "taxType": "VAT", "currency": "USD", "counterpartyName": "Spotify AB", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "taxRate": 10, "taxType": "VAT", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}]}
   createTransaction:
     speakeasy-default-create-transaction:
       responses:
         "200":
-          application/json: {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "currency": "USD", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}
+          application/json: {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "taxAmount": 15.07, "taxRate": 10, "taxType": "VAT", "currency": "USD", "counterpartyName": "Spotify AB", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "taxRate": 10, "taxType": "VAT", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}
   getTransactionById:
     speakeasy-default-get-transaction-by-id:
       parameters:
@@ -644,7 +747,7 @@ examples:
           id: "391723c9-de99-4039-b8e2-4fa5bbdf9480"
       responses:
         "200":
-          application/json: {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "currency": "USD", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}
+          application/json: {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "taxAmount": 15.07, "taxRate": 10, "taxType": "VAT", "currency": "USD", "counterpartyName": "Spotify AB", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "taxRate": 10, "taxType": "VAT", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}
   deleteTransaction:
     speakeasy-default-delete-transaction:
       parameters:
@@ -660,12 +763,12 @@ examples:
           id: "f0c1d0ef-5679-4c1b-9698-2c64e97e8c1d"
       responses:
         "200":
-          application/json: {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "currency": "USD", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}
+          application/json: {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "taxAmount": 15.07, "taxRate": 10, "taxType": "VAT", "currency": "USD", "counterpartyName": "Spotify AB", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "taxRate": 10, "taxType": "VAT", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}
   createTransactions:
     speakeasy-default-create-transactions:
       responses:
         "200":
-          application/json: [{"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "currency": "USD", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}, {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "currency": "USD", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}, {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "currency": "USD", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}]
+          application/json: [{"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "taxAmount": 15.07, "taxRate": 10, "taxType": "VAT", "currency": "USD", "counterpartyName": "Spotify AB", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "taxRate": 10, "taxType": "VAT", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}, {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "taxAmount": 15.07, "taxRate": 10, "taxType": "VAT", "currency": "USD", "counterpartyName": "Spotify AB", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "taxRate": 10, "taxType": "VAT", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}, {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "taxAmount": 15.07, "taxRate": 10, "taxType": "VAT", "currency": "USD", "counterpartyName": "Spotify AB", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "taxRate": 10, "taxType": "VAT", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}]
   deleteTransactions:
     speakeasy-default-delete-transactions:
       responses:
@@ -675,7 +778,7 @@ examples:
     speakeasy-default-update-transactions:
       responses:
         "200":
-          application/json: {"meta": {"cursor": "eyJpZCI6IjQ1NiJ9", "hasPreviousPage": false, "hasNextPage": true}, "data": [{"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "currency": "USD", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}, {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "currency": "USD", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}, {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "currency": "USD", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}]}
+          application/json: {"meta": {"cursor": "eyJpZCI6IjQ1NiJ9", "hasPreviousPage": false, "hasNextPage": true}, "data": [{"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "taxAmount": 15.07, "taxRate": 10, "taxType": "VAT", "currency": "USD", "counterpartyName": "Spotify AB", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "taxRate": 10, "taxType": "VAT", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}, {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "taxAmount": 15.07, "taxRate": 10, "taxType": "VAT", "currency": "USD", "counterpartyName": "Spotify AB", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "taxRate": 10, "taxType": "VAT", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}, {"id": "b3b7c8e2-1f2a-4c3d-9e4f-5a6b7c8d9e0f", "name": "Office Supplies Purchase", "amount": 150.75, "taxAmount": 15.07, "taxRate": 10, "taxType": "VAT", "currency": "USD", "counterpartyName": "Spotify AB", "date": "2024-05-01T12:00:00.000Z", "category": {"id": "office-supplies", "name": "Office Supplies", "color": "#FF5733", "taxRate": 10, "taxType": "VAT", "slug": "office-supplies"}, "status": "completed", "internal": false, "recurring": false, "manual": false, "frequency": "monthly", "isFulfilled": true, "note": "Paid with company credit card for office renovation", "account": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Company Credit Card", "currency": "USD", "connection": {"id": "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388", "name": "Chase Bank", "logoUrl": "https://cdn.midday.ai/logos/chase-bank.png"}}, "tags": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "name": "invoice"}, {"id": "c8e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7c", "name": "travel"}], "attachments": [{"id": "b7e2f8c1-3d4a-4e2b-9f1a-2c3d4e5f6a7b", "path": ["e1f2d3c4-b5a6-7d8e-9f0a-1b2c3d4e5f6a", "transactions", "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d", "receipt.pdf"], "size": 1928716, "type": "application/pdf", "filename": "receipt.pdf"}]}]}
   listTeams:
     speakeasy-default-list-teams:
       responses:
@@ -695,7 +798,7 @@ examples:
         path:
           id: "123e4567-e89b-12d3-a456-426614174000"
       requestBody:
-        application/json: {"name": "Acme Corporation", "email": "team@acme.com", "logoUrl": "https://cdn.midday.ai/logos/acme-corp.png", "baseCurrency": "USD"}
+        application/json: {"name": "Acme Corporation", "email": "team@acme.com", "logoUrl": "https://cdn.midday.ai/logos/acme-corp.png", "baseCurrency": "USD", "countryCode": "US"}
       responses:
         "200":
           application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "name": "Acme Corporation", "logoUrl": "https://cdn.midday.ai/logos/acme-corp.png", "plan": "pro"}
@@ -711,14 +814,14 @@ examples:
     speakeasy-default-get-current-user:
       responses:
         "200":
-          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "fullName": "Jane Doe", "email": "jane.doe@acme.com", "avatarUrl": "https://cdn.midday.ai/avatars/jane-doe.jpg", "locale": "en-US", "weekStartsOnMonday": true, "timezone": "America/New_York", "timeFormat": 24, "dateFormat": "yyyy-MM-dd", "team": {"id": "123e4567-e89b-12d3-a456-426614174000", "name": "Acme Corporation", "logoUrl": "https://cdn.midday.ai/logos/acme-corp.png", "plan": "pro"}}
+          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "fullName": "Jane Doe", "email": "jane.doe@acme.com", "avatarUrl": "https://cdn.midday.ai/avatars/jane-doe.jpg", "locale": "en-US", "weekStartsOnMonday": true, "timezone": "America/New_York", "timezoneAutoSync": true, "timeFormat": 24, "dateFormat": "yyyy-MM-dd", "team": {"id": "123e4567-e89b-12d3-a456-426614174000", "name": "Acme Corporation", "logoUrl": "https://cdn.midday.ai/logos/acme-corp.png", "plan": "pro"}}
   updateCurrentUser:
     speakeasy-default-update-current-user:
       requestBody:
-        application/json: {"fullName": "Jane Doe", "teamId": "team-abc123", "email": "jane.doe@acme.com", "avatarUrl": "https://cdn.midday.ai/avatars/jane-doe.jpg", "locale": "en-US", "weekStartsOnMonday": true, "timezone": "America/New_York", "timeFormat": 24, "dateFormat": "yyyy-MM-dd"}
+        application/json: {"fullName": "Jane Doe", "teamId": "team-abc123", "email": "jane.doe@acme.com", "avatarUrl": "https://cdn.midday.ai/avatars/jane-doe.jpg", "locale": "en-US", "weekStartsOnMonday": true, "timezone": "America/New_York", "timezoneAutoSync": true, "timeFormat": 24, "dateFormat": "yyyy-MM-dd"}
       responses:
         "200":
-          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "fullName": "Jane Doe", "email": "jane.doe@acme.com", "avatarUrl": "https://cdn.midday.ai/avatars/jane-doe.jpg", "locale": "en-US", "weekStartsOnMonday": true, "timezone": "America/New_York", "timeFormat": 24, "dateFormat": "yyyy-MM-dd", "team": {"id": "123e4567-e89b-12d3-a456-426614174000", "name": "Acme Corporation", "logoUrl": "https://cdn.midday.ai/logos/acme-corp.png", "plan": "pro"}}
+          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "fullName": "Jane Doe", "email": "jane.doe@acme.com", "avatarUrl": "https://cdn.midday.ai/avatars/jane-doe.jpg", "locale": "en-US", "weekStartsOnMonday": true, "timezone": "America/New_York", "timezoneAutoSync": true, "timeFormat": 24, "dateFormat": "yyyy-MM-dd", "team": {"id": "123e4567-e89b-12d3-a456-426614174000", "name": "Acme Corporation", "logoUrl": "https://cdn.midday.ai/logos/acme-corp.png", "plan": "pro"}}
   listCustomers:
     speakeasy-default-list-customers:
       parameters:
@@ -733,10 +836,10 @@ examples:
   createCustomer:
     speakeasy-default-create-customer:
       requestBody:
-        application/json: {"id": "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "Acme Corporation", "email": "contact@acme.com", "country": "United States", "addressLine1": "123 Main Street", "addressLine2": "Suite 400", "city": "San Francisco", "state": "California", "zip": "94105", "phone": "+1-555-123-4567", "website": "https://acme.com", "note": "Preferred contact method is email. Large enterprise client.", "vatNumber": "US123456789", "countryCode": "US", "contact": "John Smith", "tags": [{"id": "e7a9c1a2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "VIP"}, {"id": "f1b2c3d4-5678-4e7a-9c1a-2b7c1e24c2a4", "name": "Enterprise"}]}
+        application/json: {"id": "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "Acme Corporation", "email": "contact@acme.com", "billingEmail": "finance@acme.com", "country": "United States", "addressLine1": "123 Main Street", "addressLine2": "Suite 400", "city": "San Francisco", "state": "California", "zip": "94105", "phone": "+1-555-123-4567", "website": "https://acme.com", "note": "Preferred contact method is email. Large enterprise client.", "vatNumber": "US123456789", "countryCode": "US", "contact": "John Smith", "tags": [{"id": "e7a9c1a2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "VIP"}, {"id": "f1b2c3d4-5678-4e7a-9c1a-2b7c1e24c2a4", "name": "Enterprise"}]}
       responses:
         "201":
-          application/json: {"id": "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "Acme Corporation", "email": "contact@acme.com", "phone": "+1-555-123-4567", "website": "https://acme.com", "createdAt": "2024-05-01T12:34:56.789Z", "country": "United States", "addressLine1": "123 Main Street", "addressLine2": "Suite 400", "city": "San Francisco", "state": "California", "zip": "94105", "note": "Preferred contact method is email. Large enterprise client.", "vatNumber": "US123456789", "countryCode": "US", "token": "cus_abc123xyz789", "contact": "John Smith", "invoiceCount": 12, "projectCount": 3, "tags": [{"id": "e7a9c1a2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "VIP"}, {"id": "f1b2c3d4-5678-4e7a-9c1a-2b7c1e24c2a4", "name": "Enterprise"}]}
+          application/json: {"id": "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "Acme Corporation", "email": "contact@acme.com", "billingEmail": "finance@acme.com", "phone": "+1-555-123-4567", "website": "https://acme.com", "createdAt": "2024-05-01T12:34:56.789Z", "country": "United States", "addressLine1": "123 Main Street", "addressLine2": "Suite 400", "city": "San Francisco", "state": "California", "zip": "94105", "note": "Preferred contact method is email. Large enterprise client.", "vatNumber": "US123456789", "countryCode": "US", "token": "cus_abc123xyz789", "contact": "John Smith", "invoiceCount": 12, "projectCount": 3, "tags": [{"id": "e7a9c1a2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "VIP"}, {"id": "f1b2c3d4-5678-4e7a-9c1a-2b7c1e24c2a4", "name": "Enterprise"}]}
   getCustomerById:
     speakeasy-default-get-customer-by-id:
       parameters:
@@ -744,7 +847,7 @@ examples:
           id: "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4"
       responses:
         "200":
-          application/json: {"id": "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "Acme Corporation", "email": "contact@acme.com", "phone": "+1-555-123-4567", "website": "https://acme.com", "createdAt": "2024-05-01T12:34:56.789Z", "country": "United States", "addressLine1": "123 Main Street", "addressLine2": "Suite 400", "city": "San Francisco", "state": "California", "zip": "94105", "note": "Preferred contact method is email. Large enterprise client.", "vatNumber": "US123456789", "countryCode": "US", "token": "cus_abc123xyz789", "contact": "John Smith", "invoiceCount": 12, "projectCount": 3, "tags": [{"id": "e7a9c1a2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "VIP"}, {"id": "f1b2c3d4-5678-4e7a-9c1a-2b7c1e24c2a4", "name": "Enterprise"}]}
+          application/json: {"id": "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "Acme Corporation", "email": "contact@acme.com", "billingEmail": "finance@acme.com", "phone": "+1-555-123-4567", "website": "https://acme.com", "createdAt": "2024-05-01T12:34:56.789Z", "country": "United States", "addressLine1": "123 Main Street", "addressLine2": "Suite 400", "city": "San Francisco", "state": "California", "zip": "94105", "note": "Preferred contact method is email. Large enterprise client.", "vatNumber": "US123456789", "countryCode": "US", "token": "cus_abc123xyz789", "contact": "John Smith", "invoiceCount": 12, "projectCount": 3, "tags": [{"id": "e7a9c1a2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "VIP"}, {"id": "f1b2c3d4-5678-4e7a-9c1a-2b7c1e24c2a4", "name": "Enterprise"}]}
   deleteCustomer:
     speakeasy-default-delete-customer:
       parameters:
@@ -752,17 +855,17 @@ examples:
           id: "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4"
       responses:
         "200":
-          application/json: {"id": "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "Acme Corporation", "email": "contact@acme.com", "phone": "+1-555-123-4567", "website": "https://acme.com", "createdAt": "2024-05-01T12:34:56.789Z", "country": "United States", "addressLine1": "123 Main Street", "addressLine2": "Suite 400", "city": "San Francisco", "state": "California", "zip": "94105", "note": "Preferred contact method is email. Large enterprise client.", "vatNumber": "US123456789", "countryCode": "US", "token": "cus_abc123xyz789", "contact": "John Smith", "invoiceCount": 12, "projectCount": 3, "tags": [{"id": "e7a9c1a2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "VIP"}, {"id": "f1b2c3d4-5678-4e7a-9c1a-2b7c1e24c2a4", "name": "Enterprise"}]}
+          application/json: {"id": "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "Acme Corporation", "email": "contact@acme.com", "billingEmail": "finance@acme.com", "phone": "+1-555-123-4567", "website": "https://acme.com", "createdAt": "2024-05-01T12:34:56.789Z", "country": "United States", "addressLine1": "123 Main Street", "addressLine2": "Suite 400", "city": "San Francisco", "state": "California", "zip": "94105", "note": "Preferred contact method is email. Large enterprise client.", "vatNumber": "US123456789", "countryCode": "US", "token": "cus_abc123xyz789", "contact": "John Smith", "invoiceCount": 12, "projectCount": 3, "tags": [{"id": "e7a9c1a2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "VIP"}, {"id": "f1b2c3d4-5678-4e7a-9c1a-2b7c1e24c2a4", "name": "Enterprise"}]}
   updateCustomer:
     speakeasy-default-update-customer:
       parameters:
         path:
           id: "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4"
       requestBody:
-        application/json: {"id": "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "Acme Corporation", "email": "contact@acme.com", "country": "United States", "addressLine1": "123 Main Street", "addressLine2": "Suite 400", "city": "San Francisco", "state": "California", "zip": "94105", "phone": "+1-555-123-4567", "website": "https://acme.com", "note": "Preferred contact method is email. Large enterprise client.", "vatNumber": "US123456789", "countryCode": "US", "contact": "John Smith", "tags": [{"id": "e7a9c1a2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "VIP"}, {"id": "f1b2c3d4-5678-4e7a-9c1a-2b7c1e24c2a4", "name": "Enterprise"}]}
+        application/json: {"id": "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "Acme Corporation", "email": "contact@acme.com", "billingEmail": "finance@acme.com", "country": "United States", "addressLine1": "123 Main Street", "addressLine2": "Suite 400", "city": "San Francisco", "state": "California", "zip": "94105", "phone": "+1-555-123-4567", "website": "https://acme.com", "note": "Preferred contact method is email. Large enterprise client.", "vatNumber": "US123456789", "countryCode": "US", "contact": "John Smith", "tags": [{"id": "e7a9c1a2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "VIP"}, {"id": "f1b2c3d4-5678-4e7a-9c1a-2b7c1e24c2a4", "name": "Enterprise"}]}
       responses:
         "200":
-          application/json: {"id": "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "Acme Corporation", "email": "contact@acme.com", "phone": "+1-555-123-4567", "website": "https://acme.com", "createdAt": "2024-05-01T12:34:56.789Z", "country": "United States", "addressLine1": "123 Main Street", "addressLine2": "Suite 400", "city": "San Francisco", "state": "California", "zip": "94105", "note": "Preferred contact method is email. Large enterprise client.", "vatNumber": "US123456789", "countryCode": "US", "token": "cus_abc123xyz789", "contact": "John Smith", "invoiceCount": 12, "projectCount": 3, "tags": [{"id": "e7a9c1a2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "VIP"}, {"id": "f1b2c3d4-5678-4e7a-9c1a-2b7c1e24c2a4", "name": "Enterprise"}]}
+          application/json: {"id": "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "Acme Corporation", "email": "contact@acme.com", "billingEmail": "finance@acme.com", "phone": "+1-555-123-4567", "website": "https://acme.com", "createdAt": "2024-05-01T12:34:56.789Z", "country": "United States", "addressLine1": "123 Main Street", "addressLine2": "Suite 400", "city": "San Francisco", "state": "California", "zip": "94105", "note": "Preferred contact method is email. Large enterprise client.", "vatNumber": "US123456789", "countryCode": "US", "token": "cus_abc123xyz789", "contact": "John Smith", "invoiceCount": 12, "projectCount": 3, "tags": [{"id": "e7a9c1a2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "name": "VIP"}, {"id": "f1b2c3d4-5678-4e7a-9c1a-2b7c1e24c2a4", "name": "Enterprise"}]}
   listBankAccounts:
     speakeasy-default-list-bank-accounts:
       responses:
@@ -890,7 +993,7 @@ examples:
         path:
           id: "<id>"
       requestBody:
-        application/json: {"status": "archived"}
+        application/json: {}
       responses:
         "200":
           application/json: {"id": "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4", "fileName": "invoice-123.pdf", "filePath": ["inbox", "2024", "05", "invoice-123.pdf"], "displayName": "Invoice May 2024", "amount": 123.45, "currency": "USD", "contentType": "application/pdf", "date": "2024-05-01", "status": "pending", "createdAt": "2024-05-01T12:34:56.789Z", "website": "https://vendor.com", "description": "Invoice for May 2024 services", "transaction": {"id": "a1b2c3d4-5678-4e7a-9c1a-2b7c1e24c2a4", "amount": 123.45, "currency": "USD", "name": "Acme Corp", "date": "2024-05-01"}}
@@ -959,7 +1062,7 @@ examples:
           currency: "USD"
       responses:
         "200":
-          application/json: {"summary": {"currentTotal": 10000, "prevTotal": 8000, "currency": "USD"}, "meta": {"type": "revenue", "currency": "USD"}, "result": [{"date": "2023-01-31", "precentage": {"value": 25, "status": "positive"}, "current": {"date": "2023-01-31", "value": 1000, "currency": "USD"}, "previous": {"date": "2022-01-31", "value": 800, "currency": "USD"}}, {"date": "2023-01-31", "precentage": {"value": 25, "status": "positive"}, "current": {"date": "2023-01-31", "value": 1000, "currency": "USD"}, "previous": {"date": "2022-01-31", "value": 800, "currency": "USD"}}, {"date": "2023-01-31", "precentage": {"value": 25, "status": "positive"}, "current": {"date": "2023-01-31", "value": 1000, "currency": "USD"}, "previous": {"date": "2022-01-31", "value": 800, "currency": "USD"}}]}
+          application/json: {"summary": {"currentTotal": 10000, "prevTotal": 8000, "currency": "USD"}, "meta": {"type": "revenue", "currency": "USD"}, "result": [{"date": "2023-01-31", "percentage": {"value": 25, "status": "positive"}, "current": {"date": "2023-01-31", "value": 1000, "currency": "USD"}, "previous": {"date": "2022-01-31", "value": 800, "currency": "USD"}}, {"date": "2023-01-31", "percentage": {"value": 25, "status": "positive"}, "current": {"date": "2023-01-31", "value": 1000, "currency": "USD"}, "previous": {"date": "2022-01-31", "value": 800, "currency": "USD"}}, {"date": "2023-01-31", "percentage": {"value": 25, "status": "positive"}, "current": {"date": "2023-01-31", "value": 1000, "currency": "USD"}, "previous": {"date": "2022-01-31", "value": 800, "currency": "USD"}}]}
   getProfitMetrics:
     speakeasy-default-get-profit-metrics:
       parameters:
@@ -969,7 +1072,7 @@ examples:
           currency: "USD"
       responses:
         "200":
-          application/json: {"summary": {"currentTotal": 10000, "prevTotal": 8000, "currency": "USD"}, "meta": {"type": "profit", "currency": "USD"}, "result": [{"date": "2023-01-31", "precentage": {"value": 25, "status": "positive"}, "current": {"date": "2023-01-31", "value": 1000, "currency": "USD"}, "previous": {"date": "2022-01-31", "value": 800, "currency": "USD"}}, {"date": "2023-01-31", "precentage": {"value": 25, "status": "positive"}, "current": {"date": "2023-01-31", "value": 1000, "currency": "USD"}, "previous": {"date": "2022-01-31", "value": 800, "currency": "USD"}}, {"date": "2023-01-31", "precentage": {"value": 25, "status": "positive"}, "current": {"date": "2023-01-31", "value": 1000, "currency": "USD"}, "previous": {"date": "2022-01-31", "value": 800, "currency": "USD"}}]}
+          application/json: {"summary": {"currentTotal": 10000, "prevTotal": 8000, "currency": "USD"}, "meta": {"type": "profit", "currency": "USD"}, "result": [{"date": "2023-01-31", "percentage": {"value": 25, "status": "positive"}, "current": {"date": "2023-01-31", "value": 1000, "currency": "USD"}, "previous": {"date": "2022-01-31", "value": 800, "currency": "USD"}}, {"date": "2023-01-31", "percentage": {"value": 25, "status": "positive"}, "current": {"date": "2023-01-31", "value": 1000, "currency": "USD"}, "previous": {"date": "2022-01-31", "value": 800, "currency": "USD"}}, {"date": "2023-01-31", "percentage": {"value": 25, "status": "positive"}, "current": {"date": "2023-01-31", "value": 1000, "currency": "USD"}, "previous": {"date": "2022-01-31", "value": 800, "currency": "USD"}}]}
   getBurnRateMetrics:
     speakeasy-default-get-burn-rate-metrics:
       parameters:
@@ -1033,6 +1136,12 @@ examples:
       responses:
         "200":
           application/json: {"id": "b7e6c8e2-1f2a-4c3b-9e2d-1a2b3c4d5e6f", "name": "Website Redesign", "description": "Complete redesign of the company website with modern UI/UX and improved performance", "status": "in_progress", "estimate": 120, "currency": "USD", "createdAt": "2024-05-01T12:00:00.000Z", "totalDuration": 43200, "totalAmount": 3600, "customer": {"id": "a1b2c3d4-e5f6-7890-abcd-1234567890ef", "name": "Acme Corporation", "website": "https://acme.com"}, "tags": [], "users": [{"id": "f1e2d3c4-b5a6-7890-abcd-1234567890ef", "fullName": "Jane Doe", "avatarUrl": "https://cdn.midday.ai/avatar.jpg"}, {"id": "f1e2d3c4-b5a6-7890-abcd-1234567890ef", "fullName": "Jane Doe", "avatarUrl": "https://cdn.midday.ai/avatar.jpg"}]}
+    speakeasy-default-create-tracker-project:
+      requestBody:
+        application/json: {"name": "Website Redesign", "description": "Complete redesign of the company website with modern UI/UX and improved performance", "estimate": 120, "billable": true, "rate": 75, "currency": "USD", "status": "in_progress", "customerId": "a1b2c3d4-e5f6-7890-abcd-1234567890ef", "tags": [{"id": "f1e2d3c4-b5a6-7890-1234-567890abcdef", "value": "Design"}, {"id": "e2d3c4b5-a6f1-7890-1234-567890abcdef", "value": "Frontend"}]}
+      responses:
+        "200":
+          application/json: {"id": "b7e6c8e2-1f2a-4c3b-9e2d-1a2b3c4d5e6f", "name": "Website Redesign", "description": "Complete redesign of the company website with modern UI/UX and improved performance", "status": "in_progress", "estimate": 120, "currency": "USD", "createdAt": "2024-05-01T12:00:00.000Z", "totalDuration": 43200, "totalAmount": 3600, "customer": {"id": "a1b2c3d4-e5f6-7890-abcd-1234567890ef", "name": "Acme Corporation", "website": "https://acme.com"}, "tags": [], "users": [{"id": "f1e2d3c4-b5a6-7890-abcd-1234567890ef", "fullName": "Jane Doe", "avatarUrl": "https://cdn.midday.ai/avatar.jpg"}]}
   getTrackerProjectById:
     speakeasy-default-get-tracker-project-by-id:
       parameters:
@@ -1077,5 +1186,60 @@ examples:
       responses:
         "200":
           application/json: {"id": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2"}
+  createTrackerEntry:
+    speakeasy-default-create-tracker-entry:
+      requestBody:
+        application/json: {"start": "2024-04-15T09:00:00.000Z", "stop": "2024-04-15T17:00:00.000Z", "dates": ["2024-04-15", "2024-04-16"], "assignedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "projectId": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2", "description": "Worked on implementing user authentication feature", "duration": 28800}
+      responses:
+        "201":
+          application/json: {"data": [{"id": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2", "createdAt": "2024-04-15T09:00:00.000Z", "duration": 28800, "start": "2024-04-15T09:00:00.000Z", "stop": "2024-04-15T17:00:00.000Z", "teamId": "team-1234", "description": "Worked on implementing user authentication feature", "rate": 75, "currency": "USD", "billed": false, "date": "2024-04-15", "user": {"id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "fullName": "Jane Doe", "avatarUrl": "https://cdn.midday.ai/avatar.jpg"}, "project": {"id": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2", "createdAt": "2024-03-01T10:00:00.000Z", "rate": 75, "currency": "USD", "status": "in_progress", "description": "Complete website redesign with modern UI/UX", "name": "Website Redesign Project", "billable": true, "estimate": 120, "customer": {"id": "customer-1234", "name": "Acme Corporation"}}}]}
+  createTrackerEntriesBulk:
+    speakeasy-default-create-tracker-entries-bulk:
+      requestBody:
+        application/json: {"entries": [{"start": "2024-04-15T09:00:00.000Z", "stop": "2024-04-15T17:00:00.000Z", "dates": ["2024-04-15"], "assignedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "projectId": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2", "description": "Working on authentication feature", "duration": 28800}, {"start": "2024-04-16T09:00:00.000Z", "stop": "2024-04-16T17:00:00.000Z", "dates": ["2024-04-16"], "assignedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "projectId": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2", "description": "Working on dashboard feature", "duration": 28800}]}
+      responses:
+        "201":
+          application/json: {"data": []}
+  updateTrackerEntry:
+    speakeasy-default-update-tracker-entry:
+      parameters:
+        path:
+          id: "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2"
+      requestBody:
+        application/json: {"start": "2024-04-15T09:00:00.000Z", "stop": "2024-04-15T17:00:00.000Z", "dates": ["2024-04-15", "2024-04-16"], "assignedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "projectId": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2", "description": "Worked on implementing user authentication feature", "duration": 28800}
+      responses:
+        "200":
+          application/json: {"data": [{"id": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2", "createdAt": "2024-04-15T09:00:00.000Z", "duration": 28800, "start": "2024-04-15T09:00:00.000Z", "stop": "2024-04-15T17:00:00.000Z", "teamId": "team-1234", "description": "Worked on implementing user authentication feature", "rate": 75, "currency": "USD", "billed": false, "date": "2024-04-15", "user": {"id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "fullName": "Jane Doe", "avatarUrl": "https://cdn.midday.ai/avatar.jpg"}, "project": {"id": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2", "createdAt": "2024-03-01T10:00:00.000Z", "rate": 75, "currency": "USD", "status": "in_progress", "description": "Complete website redesign with modern UI/UX", "name": "Website Redesign Project", "billable": true, "estimate": 120, "customer": {"id": "customer-1234", "name": "Acme Corporation"}}}]}
+  startTimer:
+    speakeasy-default-start-timer:
+      requestBody:
+        application/json: {"projectId": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2", "assignedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "description": "Working on implementing timer feature", "start": "2024-04-15T09:00:00.000Z", "continueFromEntry": "c4d5e6f7-2a3b-4c5d-8e9f-3a4b5c6d7e8f"}
+      responses:
+        "201":
+          application/json: {"data": {"id": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2", "createdAt": "2024-04-15T09:00:00.000Z", "duration": -1, "start": "2024-04-15T09:00:00.000Z", "stop": "2024-04-15T17:00:00.000Z", "teamId": "team-1234", "description": "Worked on implementing user authentication feature", "rate": 75, "currency": "USD", "billed": false, "date": "2024-04-15", "user": {"id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "fullName": "Jane Doe", "avatarUrl": "https://cdn.midday.ai/avatar.jpg"}, "project": {"id": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2", "createdAt": "2024-03-01T10:00:00.000Z", "rate": 75, "currency": "USD", "status": "in_progress", "description": "Complete website redesign with modern UI/UX", "name": "Website Redesign Project", "billable": true, "estimate": 120, "customer": {"id": "customer-1234", "name": "Acme Corporation"}}}}
+  stopTimer:
+    speakeasy-default-stop-timer:
+      requestBody:
+        application/json: {"entryId": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2", "assignedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "stop": "2024-04-15T17:00:00.000Z"}
+      responses:
+        "200":
+          application/json: {"data": {"id": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2", "createdAt": "2024-04-15T09:00:00.000Z", "duration": -1, "start": "2024-04-15T09:00:00.000Z", "stop": "2024-04-15T17:00:00.000Z", "teamId": "team-1234", "description": "Worked on implementing user authentication feature", "rate": 75, "currency": "USD", "billed": false, "date": "2024-04-15", "user": {"id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "fullName": "Jane Doe", "avatarUrl": "https://cdn.midday.ai/avatar.jpg"}, "project": {"id": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2", "createdAt": "2024-03-01T10:00:00.000Z", "rate": 75, "currency": "USD", "status": "in_progress", "description": "Complete website redesign with modern UI/UX", "name": "Website Redesign Project", "billable": true, "estimate": 120, "customer": {"id": "customer-1234", "name": "Acme Corporation"}}}}
+  getCurrentTimer:
+    speakeasy-default-get-current-timer:
+      parameters:
+        query:
+          assignedId: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+      responses:
+        "200":
+          application/json: {"data": {"id": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2", "createdAt": "2024-04-15T09:00:00.000Z", "duration": -1, "start": "2024-04-15T09:00:00.000Z", "stop": "2024-04-15T17:00:00.000Z", "teamId": "team-1234", "description": "Worked on implementing user authentication feature", "rate": 75, "currency": "USD", "billed": false, "date": "2024-04-15", "user": {"id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "fullName": "Jane Doe", "avatarUrl": "https://cdn.midday.ai/avatar.jpg"}, "project": {"id": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2", "createdAt": "2024-03-01T10:00:00.000Z", "rate": 75, "currency": "USD", "status": "in_progress", "description": "Complete website redesign with modern UI/UX", "name": "Website Redesign Project", "billable": true, "estimate": 120, "customer": {"id": "customer-1234", "name": "Acme Corporation"}}}}
+  getTimerStatus:
+    speakeasy-default-get-timer-status:
+      parameters:
+        query:
+          assignedId: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+      responses:
+        "200":
+          application/json: {"data": {"isRunning": true, "currentEntry": {"id": "a26a5a54-1e28-4c83-b854-2821b87e4a97", "start": "<value>", "description": "brr debit greedy lasting because offset outset generously", "projectId": "f2d14591-a762-4edc-b444-ff2f1ff3b4b8", "trackerProject": {"id": "2cabaa5d-6000-419b-b904-099b57ddc208", "name": "<value>"}}, "elapsedTime": 1800}}
 examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: "## SDK Changes Detected:\n* `midday->metrics->revenue()`:  `response.result->[]` **Changed** **Breaking** :warning:\n* `midday->tracker entries->list()`:  `response.result->{}->[]->project` **Changed** **Breaking** :warning:\n* `midday->metrics->profit()`:  `response.result->[]` **Changed** **Breaking** :warning:\n* `midday->transactions->update()`:  `response` **Changed**\n* `midday->transactions->updateMany()`:  `response.data->[]` **Changed**\n* `midday->tracker timer->stopTimer()`: **Added**\n* `midday->tracker timer->getCurrentTimer()`: **Added**\n* `midday->tracker timer->getTimerStatus()`: **Added**\n* `midday->tracker->delete()`: **Deleted** **Breaking** :warning:\n* `midday->transactions->list()`:  `response.data->[]` **Changed**\n* `midday->transactions->create()`:  `response` **Changed**\n* `midday->transactions->get()`:  `response` **Changed**\n* `midday->tracker entries->create()`: **Added**\n* `midday->transactions->createMany()`:  `response.[]` **Changed**\n* `midday->tracker timer->startTimer()`: **Added**\n* `midday->teams->update()`: \n  *  `requestBody->countryCode` **Added**\n* `midday->users->get()`:  `response.timezoneAutoSync` **Added**\n* `midday->users->update()`: \n  *  `request->timezoneAutoSync` **Added**\n  *  `response.timezoneAutoSync` **Added**\n* `midday->customers->list()`:  `response.data->[]->billingEmail` **Added**\n* `midday->customers->create()`: \n  *  `request->billingEmail` **Added**\n  *  `response.billingEmail` **Added**\n* `midday->customers->get()`:  `response.billingEmail` **Added**\n* `midday->customers->delete()`:  `response.billingEmail` **Added**\n* `midday->customers->update()`: \n  *  `requestBody->billingEmail` **Added**\n  *  `response.billingEmail` **Added**\n* `midday->inbox->update()`:  `requestBody` **Changed**\n* `midday->tracker entries->update()`: **Added**\n* `midday->tracker entries->delete()`: **Added**\n* `midday->tracker entries->createBulk()`: **Added**\n"

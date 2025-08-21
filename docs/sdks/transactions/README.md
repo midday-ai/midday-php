@@ -20,6 +20,7 @@ Retrieve a list of transactions for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listTransactions" method="get" path="/transactions" -->
 ```php
 declare(strict_types=1);
 
@@ -111,13 +112,13 @@ Create a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createTransaction" method="post" path="/transactions" -->
 ```php
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
 use Midday\Midday;
-use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
@@ -125,13 +126,7 @@ $sdk = Midday\Midday::builder()
     )
     ->build();
 
-$request = new Operations\CreateTransactionRequest(
-    name: '<value>',
-    amount: 5744.12,
-    currency: 'Forint',
-    date: '2024-01-12',
-    bankAccountId: '<id>',
-);
+
 
 $response = $sdk->transactions->create(
     request: $request
@@ -164,6 +159,7 @@ Retrieve a transaction by its ID for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getTransactionById" method="get" path="/transactions/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -210,6 +206,7 @@ Delete a transaction for the authenticated team. Only manually created transacti
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="deleteTransaction" method="delete" path="/transactions/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -256,13 +253,13 @@ Update a transaction for the authenticated team. If there's no change, returns i
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateTransaction" method="patch" path="/transactions/{id}" -->
 ```php
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
 use Midday\Midday;
-use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
@@ -270,7 +267,7 @@ $sdk = Midday\Midday::builder()
     )
     ->build();
 
-$requestBody = new Operations\UpdateTransactionRequestBody();
+
 
 $response = $sdk->transactions->update(
     id: 'f0c1d0ef-5679-4c1b-9698-2c64e97e8c1d',
@@ -306,13 +303,13 @@ Bulk create transactions for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createTransactions" method="post" path="/transactions/bulk" -->
 ```php
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
 use Midday\Midday;
-use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
@@ -320,15 +317,7 @@ $sdk = Midday\Midday::builder()
     )
     ->build();
 
-$request = [
-    new Operations\RequestBody(
-        name: '<value>',
-        amount: 6684.51,
-        currency: 'Libyan Dinar',
-        date: '2024-05-10',
-        bankAccountId: '<id>',
-    ),
-];
+
 
 $response = $sdk->transactions->createMany(
     request: $request
@@ -361,6 +350,7 @@ Bulk delete transactions for the authenticated team. Only manually created trans
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="deleteTransactions" method="delete" path="/transactions/bulk" -->
 ```php
 declare(strict_types=1);
 
@@ -374,9 +364,7 @@ $sdk = Midday\Midday::builder()
     )
     ->build();
 
-$request = [
-    'cc0db9ee-175c-4562-914a-20c38d2dc310',
-];
+
 
 $response = $sdk->transactions->deleteMany(
     request: $request
@@ -409,13 +397,13 @@ Bulk update transactions for the authenticated team. If there's no change, retur
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateTransactions" method="patch" path="/transactions/bulk" -->
 ```php
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
 use Midday\Midday;
-use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
@@ -423,11 +411,7 @@ $sdk = Midday\Midday::builder()
     )
     ->build();
 
-$request = new Operations\UpdateTransactionsRequest(
-    ids: [
-        '<value>',
-    ],
-);
+
 
 $response = $sdk->transactions->updateMany(
     request: $request

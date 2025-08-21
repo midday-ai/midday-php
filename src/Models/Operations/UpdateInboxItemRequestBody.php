@@ -13,18 +13,49 @@ class UpdateInboxItemRequestBody
 {
     /**
      *
-     * @var UpdateInboxItemStatus $status
+     * @var ?UpdateInboxItemStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Midday\Midday\Models\Operations\UpdateInboxItemStatus')]
-    public UpdateInboxItemStatus $status;
+    #[\Speakeasy\Serializer\Annotation\Type('\Midday\Midday\Models\Operations\UpdateInboxItemStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?UpdateInboxItemStatus $status = null;
 
     /**
-     * @param  UpdateInboxItemStatus  $status
+     *
+     * @var ?string $displayName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('displayName')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $displayName = null;
+
+    /**
+     *
+     * @var ?string $currency
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $currency = null;
+
+    /**
+     *
+     * @var ?float $amount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $amount = null;
+
+    /**
+     * @param  ?UpdateInboxItemStatus  $status
+     * @param  ?string  $displayName
+     * @param  ?string  $currency
+     * @param  ?float  $amount
      * @phpstan-pure
      */
-    public function __construct(UpdateInboxItemStatus $status)
+    public function __construct(?UpdateInboxItemStatus $status = null, ?string $displayName = null, ?string $currency = null, ?float $amount = null)
     {
         $this->status = $status;
+        $this->displayName = $displayName;
+        $this->currency = $currency;
+        $this->amount = $amount;
     }
 }

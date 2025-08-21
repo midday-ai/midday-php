@@ -17,4 +17,5 @@ enum ListInvoicesStatus: string
     case Paid = 'paid';
     case Unpaid = 'unpaid';
     case Canceled = 'canceled';
+    case Scheduled = 'scheduled';
 }

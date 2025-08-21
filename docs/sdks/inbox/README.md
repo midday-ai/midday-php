@@ -16,13 +16,13 @@ Retrieve a list of inbox items for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listInboxItems" method="get" path="/inbox" -->
 ```php
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
 use Midday\Midday;
-use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
@@ -30,7 +30,7 @@ $sdk = Midday\Midday::builder()
     )
     ->build();
 
-$request = new Operations\ListInboxItemsRequest();
+
 
 $response = $sdk->inbox->list(
     request: $request
@@ -63,6 +63,7 @@ Retrieve a inbox item by its unique identifier for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getInboxItemById" method="get" path="/inbox/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -109,6 +110,7 @@ Delete a inbox item by its unique identifier for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="deleteInboxItem" method="delete" path="/inbox/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -155,6 +157,7 @@ Update fields of an inbox item by its unique identifier for the authenticated te
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateInboxItem" method="patch" path="/inbox/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -169,9 +172,7 @@ $sdk = Midday\Midday::builder()
     )
     ->build();
 
-$requestBody = new Operations\UpdateInboxItemRequestBody(
-    status: Operations\UpdateInboxItemStatus::Archived,
-);
+$requestBody = new Operations\UpdateInboxItemRequestBody();
 
 $response = $sdk->inbox->update(
     id: '<id>',

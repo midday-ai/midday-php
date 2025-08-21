@@ -15,6 +15,7 @@ Retrieve a list of documents for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listDocuments" method="get" path="/documents" -->
 ```php
 declare(strict_types=1);
 
@@ -70,6 +71,7 @@ Retrieve a document by its unique identifier for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getDocumentById" method="get" path="/documents/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -116,6 +118,7 @@ Delete a document by its unique identifier for the authenticated team.
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="deleteDocument" method="delete" path="/documents/{id}" -->
 ```php
 declare(strict_types=1);
 

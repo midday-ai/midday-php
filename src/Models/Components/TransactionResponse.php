@@ -77,6 +77,38 @@ class TransactionResponse
     public Account $account;
 
     /**
+     * Tax amount of the transaction
+     *
+     * @var ?float $taxAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('taxAmount')]
+    public ?float $taxAmount;
+
+    /**
+     * Tax rate of the transaction
+     *
+     * @var ?float $taxRate
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('taxRate')]
+    public ?float $taxRate;
+
+    /**
+     * Tax type of the transaction
+     *
+     * @var ?string $taxType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('taxType')]
+    public ?string $taxType;
+
+    /**
+     * Name of the counterparty
+     *
+     * @var ?string $counterpartyName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('counterpartyName')]
+    public ?string $counterpartyName;
+
+    /**
      * Category information assigned to the transaction for organization
      *
      * @var ?Category $category
@@ -152,6 +184,10 @@ class TransactionResponse
      * @param  string  $status
      * @param  bool  $isFulfilled
      * @param  Account  $account
+     * @param  ?float  $taxAmount
+     * @param  ?float  $taxRate
+     * @param  ?string  $taxType
+     * @param  ?string  $counterpartyName
      * @param  ?Category  $category
      * @param  ?bool  $internal
      * @param  ?bool  $recurring
@@ -162,7 +198,7 @@ class TransactionResponse
      * @param  ?array<Attachment>  $attachments
      * @phpstan-pure
      */
-    public function __construct(string $id, string $name, float $amount, string $currency, string $date, string $status, bool $isFulfilled, Account $account, ?Category $category = null, ?bool $internal = null, ?bool $recurring = null, ?bool $manual = null, ?string $frequency = null, ?string $note = null, ?array $tags = null, ?array $attachments = null)
+    public function __construct(string $id, string $name, float $amount, string $currency, string $date, string $status, bool $isFulfilled, Account $account, ?float $taxAmount = null, ?float $taxRate = null, ?string $taxType = null, ?string $counterpartyName = null, ?Category $category = null, ?bool $internal = null, ?bool $recurring = null, ?bool $manual = null, ?string $frequency = null, ?string $note = null, ?array $tags = null, ?array $attachments = null)
     {
         $this->id = $id;
         $this->name = $name;
@@ -172,6 +208,10 @@ class TransactionResponse
         $this->status = $status;
         $this->isFulfilled = $isFulfilled;
         $this->account = $account;
+        $this->taxAmount = $taxAmount;
+        $this->taxRate = $taxRate;
+        $this->taxType = $taxType;
+        $this->counterpartyName = $counterpartyName;
         $this->category = $category;
         $this->internal = $internal;
         $this->recurring = $recurring;

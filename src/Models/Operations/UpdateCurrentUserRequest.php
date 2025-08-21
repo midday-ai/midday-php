@@ -75,6 +75,15 @@ class UpdateCurrentUserRequest
     public ?string $timezone = null;
 
     /**
+     * Whether to automatically sync timezone with browser timezone
+     *
+     * @var ?bool $timezoneAutoSync
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('timezoneAutoSync')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $timezoneAutoSync = null;
+
+    /**
      * User's preferred time format: 12 for 12-hour format, 24 for 24-hour format
      *
      * @var ?float $timeFormat
@@ -101,11 +110,12 @@ class UpdateCurrentUserRequest
      * @param  ?string  $locale
      * @param  ?bool  $weekStartsOnMonday
      * @param  ?string  $timezone
+     * @param  ?bool  $timezoneAutoSync
      * @param  ?float  $timeFormat
      * @param  ?DateFormatRequest  $dateFormat
      * @phpstan-pure
      */
-    public function __construct(?string $fullName = null, ?string $teamId = null, ?string $email = null, ?string $avatarUrl = null, ?string $locale = null, ?bool $weekStartsOnMonday = null, ?string $timezone = null, ?float $timeFormat = null, ?DateFormatRequest $dateFormat = null)
+    public function __construct(?string $fullName = null, ?string $teamId = null, ?string $email = null, ?string $avatarUrl = null, ?string $locale = null, ?bool $weekStartsOnMonday = null, ?string $timezone = null, ?bool $timezoneAutoSync = null, ?float $timeFormat = null, ?DateFormatRequest $dateFormat = null)
     {
         $this->fullName = $fullName;
         $this->teamId = $teamId;
@@ -114,6 +124,7 @@ class UpdateCurrentUserRequest
         $this->locale = $locale;
         $this->weekStartsOnMonday = $weekStartsOnMonday;
         $this->timezone = $timezone;
+        $this->timezoneAutoSync = $timezoneAutoSync;
         $this->timeFormat = $timeFormat;
         $this->dateFormat = $dateFormat;
     }
