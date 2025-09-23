@@ -16,4 +16,7 @@ enum UpdateInboxItemStatus: string
     case Processing = 'processing';
     case Done = 'done';
     case Pending = 'pending';
+    case Deleted = 'deleted';
+    case Analyzing = 'analyzing';
+    case SuggestedMatch = 'suggested_match';
 }

@@ -14,4 +14,5 @@ enum ListInboxItemsStatus: string
 {
     case Done = 'done';
     case Pending = 'pending';
+    case SuggestedMatch = 'suggested_match';
 }

@@ -53,12 +53,13 @@ class UpdateTrackerEntryRequestBody
     public float $duration;
 
     /**
-     * Unique identifier of the user assigned to this tracker entry
+     * Unique identifier of the user assigned to this tracker entry. If not provided, will use the authenticated user
      *
      * @var ?string $assignedId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('assignedId')]
-    public ?string $assignedId;
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $assignedId = null;
 
     /**
      * Optional description or notes for the tracker entry

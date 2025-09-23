@@ -13,17 +13,26 @@ class Security
 {
     /**
      *
-     * @var string $token
+     * @var ?string $oauth2
      */
-    #[SpeakeasyMetadata('security:scheme=true,type=http,subtype=bearer,name=Authorization')]
-    public string $token;
+    #[SpeakeasyMetadata('security:scheme=true,type=apiKey,subtype=header,name=Authorization')]
+    public ?string $oauth2 = null;
 
     /**
-     * @param  string  $token
+     *
+     * @var ?string $token
+     */
+    #[SpeakeasyMetadata('security:scheme=true,type=http,subtype=bearer,name=Authorization')]
+    public ?string $token = null;
+
+    /**
+     * @param  ?string  $oauth2
+     * @param  ?string  $token
      * @phpstan-pure
      */
-    public function __construct(string $token)
+    public function __construct(?string $oauth2 = null, ?string $token = null)
     {
+        $this->oauth2 = $oauth2;
         $this->token = $token;
     }
 }

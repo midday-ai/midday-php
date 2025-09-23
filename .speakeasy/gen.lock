@@ -1,29 +1,29 @@
 lockVersion: 2.0.0
 id: 9afefabe-3857-46d4-b54b-d468fd10a25d
 management:
-  docChecksum: dd329bc0918b4bf1ae9f9d626db08cfb
+  docChecksum: b7ac057234b8cfcbb0d66d31179e13cf
   docVersion: 0.0.1
-  speakeasyVersion: 1.606.0
-  generationVersion: 2.686.7
-  releaseVersion: 0.0.2
-  configChecksum: 34c719766f1d388c89a3205c42248b65
+  speakeasyVersion: 1.622.1
+  generationVersion: 2.709.0
+  releaseVersion: 0.1.0
+  configChecksum: 0c2d3d9688798f739e330238f24c32a8
   repoURL: https://github.com/midday-ai/midday-php.git
   installationURL: https://github.com/midday-ai/midday-php
   published: true
 features:
   php:
     constsAndDefaults: 0.2.0
-    core: 3.8.9
-    enums: 2.81.1
+    core: 3.8.10
+    enums: 2.82.0
     examples: 2.81.6
     flattening: 2.81.1
-    globalSecurity: 2.81.8
-    globalSecurityFlattening: 0.1.2
+    globalSecurity: 2.81.9
     globalServerURLs: 2.82.2
     methodArguments: 0.1.0
     nameOverrides: 2.81.2
     nullables: 1.0.1
     responseFormat: 0.1.0
+    unions: 0.1.5
 generatedFiles:
   - .gitattributes
   - USAGE.md
@@ -40,6 +40,11 @@ generatedFiles:
   - docs/Models/Components/GetExpensesResponseSchemaMeta.md
   - docs/Models/Components/GetProfitResponseSchema.md
   - docs/Models/Components/GetRevenueResponseSchema.md
+  - docs/Models/Components/NotificationResponseSchema.md
+  - docs/Models/Components/NotificationSchema.md
+  - docs/Models/Components/NotificationSchemaStatus.md
+  - docs/Models/Components/NotificationsResponseSchema.md
+  - docs/Models/Components/NotificationsResponseSchemaMeta.md
   - docs/Models/Components/ProfitCurrent.md
   - docs/Models/Components/ProfitMeta.md
   - docs/Models/Components/ProfitMetaType.md
@@ -57,6 +62,7 @@ generatedFiles:
   - docs/Models/Components/RevenueResultItem.md
   - docs/Models/Components/RevenueSummary.md
   - docs/Models/Components/Security.md
+  - docs/Models/Components/Source.md
   - docs/Models/Components/SpendingResultArray.md
   - docs/Models/Components/Summary.md
   - docs/Models/Components/TagResponse.md
@@ -68,8 +74,30 @@ generatedFiles:
   - docs/Models/Components/TrackerProjectsResponseMeta.md
   - docs/Models/Components/TransactionResponse.md
   - docs/Models/Components/TransactionResponseTag.md
+  - docs/Models/Components/UpdateAllNotificationsStatusResponseSchema.md
+  - docs/Models/Components/UpdateAllNotificationsStatusSchema.md
+  - docs/Models/Components/UpdateAllNotificationsStatusSchemaStatus.md
   - docs/Models/Components/User.md
+  - docs/Models/Errors/ConflictException.md
+  - docs/Models/Errors/CreateInvoiceBadRequestException.md
+  - docs/Models/Errors/CreateInvoiceInternalServerError.md
+  - docs/Models/Errors/CreateInvoiceNotFoundException.md
+  - docs/Models/Errors/GetDocumentPreSignedUrlBadRequestException.md
+  - docs/Models/Errors/GetDocumentPreSignedUrlInternalServerError.md
+  - docs/Models/Errors/GetDocumentPreSignedUrlNotFoundException.md
+  - docs/Models/Errors/GetInboxPreSignedUrlBadRequestException.md
+  - docs/Models/Errors/GetInboxPreSignedUrlInternalServerError.md
+  - docs/Models/Errors/GetInboxPreSignedUrlNotFoundException.md
+  - docs/Models/Errors/GetOAuthAuthorizationBadRequestException.md
+  - docs/Models/Errors/GetTransactionAttachmentPreSignedUrlBadRequestException.md
+  - docs/Models/Errors/GetTransactionAttachmentPreSignedUrlInternalServerError.md
+  - docs/Models/Errors/GetTransactionAttachmentPreSignedUrlNotFoundException.md
+  - docs/Models/Errors/PostOAuthAuthorizationBadRequestException.md
+  - docs/Models/Errors/PostOAuthTokenBadRequestException.md
+  - docs/Models/Errors/UnauthorizedException.md
   - docs/Models/Operations/Attachments.md
+  - docs/Models/Operations/AuthorizationCode.md
+  - docs/Models/Operations/BottomBlock.md
   - docs/Models/Operations/CreateBankAccountRequest.md
   - docs/Models/Operations/CreateBankAccountResponse.md
   - docs/Models/Operations/CreateBankAccountResponseBody.md
@@ -78,6 +106,10 @@ generatedFiles:
   - docs/Models/Operations/CreateCustomerResponseBody.md
   - docs/Models/Operations/CreateCustomerTagRequest.md
   - docs/Models/Operations/CreateCustomerTagResponse.md
+  - docs/Models/Operations/CreateInvoiceRequest.md
+  - docs/Models/Operations/CreateInvoiceResponse.md
+  - docs/Models/Operations/CreateInvoiceResponseBody.md
+  - docs/Models/Operations/CreateInvoiceStatus.md
   - docs/Models/Operations/CreateTagResponse.md
   - docs/Models/Operations/CreateTrackerEntriesBulkCustomer.md
   - docs/Models/Operations/CreateTrackerEntriesBulkData.md
@@ -104,6 +136,7 @@ generatedFiles:
   - docs/Models/Operations/CreateTransactionsResponse.md
   - docs/Models/Operations/CurrentEntry.md
   - docs/Models/Operations/DateFormatRequest.md
+  - docs/Models/Operations/Decision.md
   - docs/Models/Operations/DeleteBankAccountRequest.md
   - docs/Models/Operations/DeleteBankAccountResponse.md
   - docs/Models/Operations/DeleteBankAccountResponseBody.md
@@ -133,12 +166,14 @@ generatedFiles:
   - docs/Models/Operations/DeleteTransactionResponseBody.md
   - docs/Models/Operations/DeleteTransactionsResponse.md
   - docs/Models/Operations/DeleteTransactionsResponseBody.md
+  - docs/Models/Operations/DeliveryType.md
   - docs/Models/Operations/Entry.md
+  - docs/Models/Operations/FromDetails.md
   - docs/Models/Operations/GetBankAccountByIdRequest.md
   - docs/Models/Operations/GetBankAccountByIdResponse.md
   - docs/Models/Operations/GetBankAccountByIdResponseBody.md
-  - docs/Models/Operations/GetBurnRateMetricsRequest.md
-  - docs/Models/Operations/GetBurnRateMetricsResponse.md
+  - docs/Models/Operations/GetBurnRateReportsRequest.md
+  - docs/Models/Operations/GetBurnRateReportsResponse.md
   - docs/Models/Operations/GetCurrentTimerCustomer.md
   - docs/Models/Operations/GetCurrentTimerData.md
   - docs/Models/Operations/GetCurrentTimerProject.md
@@ -158,12 +193,18 @@ generatedFiles:
   - docs/Models/Operations/GetDocumentByIdRequest.md
   - docs/Models/Operations/GetDocumentByIdResponse.md
   - docs/Models/Operations/GetDocumentByIdResponseBody.md
-  - docs/Models/Operations/GetExpensesMetricsRequest.md
-  - docs/Models/Operations/GetExpensesMetricsResponse.md
+  - docs/Models/Operations/GetDocumentPreSignedUrlRequest.md
+  - docs/Models/Operations/GetDocumentPreSignedUrlResponse.md
+  - docs/Models/Operations/GetDocumentPreSignedUrlResponseBody.md
+  - docs/Models/Operations/GetExpensesReportsRequest.md
+  - docs/Models/Operations/GetExpensesReportsResponse.md
   - docs/Models/Operations/GetInboxItemByIdRequest.md
   - docs/Models/Operations/GetInboxItemByIdResponse.md
   - docs/Models/Operations/GetInboxItemByIdResponseBody.md
   - docs/Models/Operations/GetInboxItemByIdTransaction.md
+  - docs/Models/Operations/GetInboxPreSignedUrlRequest.md
+  - docs/Models/Operations/GetInboxPreSignedUrlResponse.md
+  - docs/Models/Operations/GetInboxPreSignedUrlResponseBody.md
   - docs/Models/Operations/GetInvoiceByIdCustomer.md
   - docs/Models/Operations/GetInvoiceByIdRequest.md
   - docs/Models/Operations/GetInvoiceByIdResponse.md
@@ -175,14 +216,18 @@ generatedFiles:
   - docs/Models/Operations/GetInvoiceSummaryStatus.md
   - docs/Models/Operations/GetInvoicesPaymentStatusResponse.md
   - docs/Models/Operations/GetInvoicesPaymentStatusResponseBody.md
-  - docs/Models/Operations/GetProfitMetricsRequest.md
-  - docs/Models/Operations/GetProfitMetricsResponse.md
-  - docs/Models/Operations/GetRevenueMetricsRequest.md
-  - docs/Models/Operations/GetRevenueMetricsResponse.md
-  - docs/Models/Operations/GetRunwayMetricsRequest.md
-  - docs/Models/Operations/GetRunwayMetricsResponse.md
-  - docs/Models/Operations/GetSpendingMetricsRequest.md
-  - docs/Models/Operations/GetSpendingMetricsResponse.md
+  - docs/Models/Operations/GetOAuthAuthorizationRequest.md
+  - docs/Models/Operations/GetOAuthAuthorizationResponse.md
+  - docs/Models/Operations/GetOAuthAuthorizationResponseBody.md
+  - docs/Models/Operations/GetOAuthAuthorizationStatus.md
+  - docs/Models/Operations/GetProfitReportsRequest.md
+  - docs/Models/Operations/GetProfitReportsResponse.md
+  - docs/Models/Operations/GetRevenueReportsRequest.md
+  - docs/Models/Operations/GetRevenueReportsResponse.md
+  - docs/Models/Operations/GetRunwayReportsRequest.md
+  - docs/Models/Operations/GetRunwayReportsResponse.md
+  - docs/Models/Operations/GetSpendingReportsRequest.md
+  - docs/Models/Operations/GetSpendingReportsResponse.md
   - docs/Models/Operations/GetTagByIdRequest.md
   - docs/Models/Operations/GetTagByIdResponse.md
   - docs/Models/Operations/GetTeamByIdPlan.md
@@ -195,8 +240,14 @@ generatedFiles:
   - docs/Models/Operations/GetTimerStatusResponseBody.md
   - docs/Models/Operations/GetTrackerProjectByIdRequest.md
   - docs/Models/Operations/GetTrackerProjectByIdResponse.md
+  - docs/Models/Operations/GetTransactionAttachmentPreSignedUrlRequest.md
+  - docs/Models/Operations/GetTransactionAttachmentPreSignedUrlResponse.md
+  - docs/Models/Operations/GetTransactionAttachmentPreSignedUrlResponseBody.md
   - docs/Models/Operations/GetTransactionByIdRequest.md
   - docs/Models/Operations/GetTransactionByIdResponse.md
+  - docs/Models/Operations/GrantTypeAuthorizationCode.md
+  - docs/Models/Operations/GrantTypeRefreshToken.md
+  - docs/Models/Operations/LineItem.md
   - docs/Models/Operations/ListBankAccountsData.md
   - docs/Models/Operations/ListBankAccountsRequest.md
   - docs/Models/Operations/ListBankAccountsResponse.md
@@ -227,6 +278,10 @@ generatedFiles:
   - docs/Models/Operations/ListInvoicesResponse.md
   - docs/Models/Operations/ListInvoicesResponseBody.md
   - docs/Models/Operations/ListInvoicesStatus.md
+  - docs/Models/Operations/ListNotificationsRequest.md
+  - docs/Models/Operations/ListNotificationsResponse.md
+  - docs/Models/Operations/ListNotificationsStatusEnum1.md
+  - docs/Models/Operations/ListNotificationsStatusEnum2.md
   - docs/Models/Operations/ListTagsResponse.md
   - docs/Models/Operations/ListTeamMembersData.md
   - docs/Models/Operations/ListTeamMembersRequest.md
@@ -251,12 +306,28 @@ generatedFiles:
   - docs/Models/Operations/ListTransactionsResponse.md
   - docs/Models/Operations/ListTransactionsResponseBody.md
   - docs/Models/Operations/ListTransactionsType.md
+  - docs/Models/Operations/Name.md
+  - docs/Models/Operations/NoteDetails.md
+  - docs/Models/Operations/PaymentDetails.md
+  - docs/Models/Operations/PostOAuthAuthorizationRequest.md
+  - docs/Models/Operations/PostOAuthAuthorizationResponse.md
+  - docs/Models/Operations/PostOAuthAuthorizationResponseBody.md
+  - docs/Models/Operations/PostOAuthRevokeRequest.md
+  - docs/Models/Operations/PostOAuthRevokeResponse.md
+  - docs/Models/Operations/PostOAuthRevokeResponseBody.md
+  - docs/Models/Operations/PostOAuthTokenRequest.md
+  - docs/Models/Operations/PostOAuthTokenResponse.md
+  - docs/Models/Operations/PostOAuthTokenResponseBody.md
+  - docs/Models/Operations/RefreshToken.md
   - docs/Models/Operations/RequestBody.md
+  - docs/Models/Operations/ResponseType.md
   - docs/Models/Operations/Result.md
   - docs/Models/Operations/Role.md
+  - docs/Models/Operations/Scope.md
   - docs/Models/Operations/SearchRequest.md
   - docs/Models/Operations/SearchResponse.md
   - docs/Models/Operations/SearchResponseBody.md
+  - docs/Models/Operations/Size.md
   - docs/Models/Operations/StartTimerCustomer.md
   - docs/Models/Operations/StartTimerData.md
   - docs/Models/Operations/StartTimerProject.md
@@ -264,6 +335,7 @@ generatedFiles:
   - docs/Models/Operations/StartTimerResponse.md
   - docs/Models/Operations/StartTimerResponseBody.md
   - docs/Models/Operations/StartTimerUser.md
+  - docs/Models/Operations/Status.md
   - docs/Models/Operations/StopTimerCustomer.md
   - docs/Models/Operations/StopTimerData.md
   - docs/Models/Operations/StopTimerProject.md
@@ -271,7 +343,15 @@ generatedFiles:
   - docs/Models/Operations/StopTimerResponse.md
   - docs/Models/Operations/StopTimerResponseBody.md
   - docs/Models/Operations/StopTimerUser.md
+  - docs/Models/Operations/Template.md
+  - docs/Models/Operations/TemplateDeliveryType.md
+  - docs/Models/Operations/TemplateFromDetails.md
+  - docs/Models/Operations/TemplatePaymentDetails.md
+  - docs/Models/Operations/TokenType.md
+  - docs/Models/Operations/TokenTypeHint.md
+  - docs/Models/Operations/TopBlock.md
   - docs/Models/Operations/TrackerProject.md
+  - docs/Models/Operations/UpdateAllNotificationsStatusResponse.md
   - docs/Models/Operations/UpdateBankAccountRequest.md
   - docs/Models/Operations/UpdateBankAccountRequestBody.md
   - docs/Models/Operations/UpdateBankAccountResponse.md
@@ -294,6 +374,17 @@ generatedFiles:
   - docs/Models/Operations/UpdateInboxItemResponseBody.md
   - docs/Models/Operations/UpdateInboxItemStatus.md
   - docs/Models/Operations/UpdateInboxItemTransaction.md
+  - docs/Models/Operations/UpdateInvoiceCustomer.md
+  - docs/Models/Operations/UpdateInvoiceRequest.md
+  - docs/Models/Operations/UpdateInvoiceRequestBody.md
+  - docs/Models/Operations/UpdateInvoiceResponse.md
+  - docs/Models/Operations/UpdateInvoiceResponseBody.md
+  - docs/Models/Operations/UpdateInvoiceStatusRequest.md
+  - docs/Models/Operations/UpdateInvoiceStatusResponse.md
+  - docs/Models/Operations/UpdateNotificationStatusRequest.md
+  - docs/Models/Operations/UpdateNotificationStatusRequestBody.md
+  - docs/Models/Operations/UpdateNotificationStatusResponse.md
+  - docs/Models/Operations/UpdateNotificationStatusStatus.md
   - docs/Models/Operations/UpdateTagRequest.md
   - docs/Models/Operations/UpdateTagRequestBody.md
   - docs/Models/Operations/UpdateTagResponse.md
@@ -331,8 +422,10 @@ generatedFiles:
   - docs/sdks/documents/README.md
   - docs/sdks/inbox/README.md
   - docs/sdks/invoices/README.md
-  - docs/sdks/metrics/README.md
   - docs/sdks/midday/README.md
+  - docs/sdks/notifications/README.md
+  - docs/sdks/oauth/README.md
+  - docs/sdks/reports/README.md
   - docs/sdks/search/README.md
   - docs/sdks/tags/README.md
   - docs/sdks/teams/README.md
@@ -365,7 +458,6 @@ generatedFiles:
   - src/Hooks/TokenResponse.php
   - src/Inbox.php
   - src/Invoices.php
-  - src/Metrics.php
   - src/Midday.php
   - src/MiddayBuilder.php
   - src/Models/Components/Account.php
@@ -380,6 +472,11 @@ generatedFiles:
   - src/Models/Components/GetExpensesResponseSchemaMeta.php
   - src/Models/Components/GetProfitResponseSchema.php
   - src/Models/Components/GetRevenueResponseSchema.php
+  - src/Models/Components/NotificationResponseSchema.php
+  - src/Models/Components/NotificationSchema.php
+  - src/Models/Components/NotificationSchemaStatus.php
+  - src/Models/Components/NotificationsResponseSchema.php
+  - src/Models/Components/NotificationsResponseSchemaMeta.php
   - src/Models/Components/ProfitCurrent.php
   - src/Models/Components/ProfitMeta.php
   - src/Models/Components/ProfitMetaType.php
@@ -397,6 +494,7 @@ generatedFiles:
   - src/Models/Components/RevenueResultItem.php
   - src/Models/Components/RevenueSummary.php
   - src/Models/Components/Security.php
+  - src/Models/Components/Source.php
   - src/Models/Components/SpendingResultArray.php
   - src/Models/Components/Summary.php
   - src/Models/Components/TagResponse.php
@@ -408,9 +506,48 @@ generatedFiles:
   - src/Models/Components/TrackerProjectsResponseMeta.php
   - src/Models/Components/TransactionResponse.php
   - src/Models/Components/TransactionResponseTag.php
+  - src/Models/Components/UpdateAllNotificationsStatusResponseSchema.php
+  - src/Models/Components/UpdateAllNotificationsStatusSchema.php
+  - src/Models/Components/UpdateAllNotificationsStatusSchemaStatus.php
   - src/Models/Components/User.php
   - src/Models/Errors/APIException.php
+  - src/Models/Errors/ConflictException.php
+  - src/Models/Errors/ConflictExceptionThrowable.php
+  - src/Models/Errors/CreateInvoiceBadRequestException.php
+  - src/Models/Errors/CreateInvoiceBadRequestExceptionThrowable.php
+  - src/Models/Errors/CreateInvoiceInternalServerError.php
+  - src/Models/Errors/CreateInvoiceInternalServerErrorThrowable.php
+  - src/Models/Errors/CreateInvoiceNotFoundException.php
+  - src/Models/Errors/CreateInvoiceNotFoundExceptionThrowable.php
+  - src/Models/Errors/GetDocumentPreSignedUrlBadRequestException.php
+  - src/Models/Errors/GetDocumentPreSignedUrlBadRequestExceptionThrowable.php
+  - src/Models/Errors/GetDocumentPreSignedUrlInternalServerError.php
+  - src/Models/Errors/GetDocumentPreSignedUrlInternalServerErrorThrowable.php
+  - src/Models/Errors/GetDocumentPreSignedUrlNotFoundException.php
+  - src/Models/Errors/GetDocumentPreSignedUrlNotFoundExceptionThrowable.php
+  - src/Models/Errors/GetInboxPreSignedUrlBadRequestException.php
+  - src/Models/Errors/GetInboxPreSignedUrlBadRequestExceptionThrowable.php
+  - src/Models/Errors/GetInboxPreSignedUrlInternalServerError.php
+  - src/Models/Errors/GetInboxPreSignedUrlInternalServerErrorThrowable.php
+  - src/Models/Errors/GetInboxPreSignedUrlNotFoundException.php
+  - src/Models/Errors/GetInboxPreSignedUrlNotFoundExceptionThrowable.php
+  - src/Models/Errors/GetOAuthAuthorizationBadRequestException.php
+  - src/Models/Errors/GetOAuthAuthorizationBadRequestExceptionThrowable.php
+  - src/Models/Errors/GetTransactionAttachmentPreSignedUrlBadRequestException.php
+  - src/Models/Errors/GetTransactionAttachmentPreSignedUrlBadRequestExceptionThrowable.php
+  - src/Models/Errors/GetTransactionAttachmentPreSignedUrlInternalServerError.php
+  - src/Models/Errors/GetTransactionAttachmentPreSignedUrlInternalServerErrorThrowable.php
+  - src/Models/Errors/GetTransactionAttachmentPreSignedUrlNotFoundException.php
+  - src/Models/Errors/GetTransactionAttachmentPreSignedUrlNotFoundExceptionThrowable.php
+  - src/Models/Errors/PostOAuthAuthorizationBadRequestException.php
+  - src/Models/Errors/PostOAuthAuthorizationBadRequestExceptionThrowable.php
+  - src/Models/Errors/PostOAuthTokenBadRequestException.php
+  - src/Models/Errors/PostOAuthTokenBadRequestExceptionThrowable.php
+  - src/Models/Errors/UnauthorizedException.php
+  - src/Models/Errors/UnauthorizedExceptionThrowable.php
   - src/Models/Operations/Attachments.php
+  - src/Models/Operations/AuthorizationCode.php
+  - src/Models/Operations/BottomBlock.php
   - src/Models/Operations/CreateBankAccountRequest.php
   - src/Models/Operations/CreateBankAccountResponse.php
   - src/Models/Operations/CreateBankAccountResponseBody.php
@@ -419,6 +556,10 @@ generatedFiles:
   - src/Models/Operations/CreateCustomerResponseBody.php
   - src/Models/Operations/CreateCustomerTagRequest.php
   - src/Models/Operations/CreateCustomerTagResponse.php
+  - src/Models/Operations/CreateInvoiceRequest.php
+  - src/Models/Operations/CreateInvoiceResponse.php
+  - src/Models/Operations/CreateInvoiceResponseBody.php
+  - src/Models/Operations/CreateInvoiceStatus.php
   - src/Models/Operations/CreateTagResponse.php
   - src/Models/Operations/CreateTrackerEntriesBulkCustomer.php
   - src/Models/Operations/CreateTrackerEntriesBulkData.php
@@ -445,6 +586,7 @@ generatedFiles:
   - src/Models/Operations/CreateTransactionsResponse.php
   - src/Models/Operations/CurrentEntry.php
   - src/Models/Operations/DateFormatRequest.php
+  - src/Models/Operations/Decision.php
   - src/Models/Operations/DeleteBankAccountRequest.php
   - src/Models/Operations/DeleteBankAccountResponse.php
   - src/Models/Operations/DeleteBankAccountResponseBody.php
@@ -474,12 +616,14 @@ generatedFiles:
   - src/Models/Operations/DeleteTransactionResponseBody.php
   - src/Models/Operations/DeleteTransactionsResponse.php
   - src/Models/Operations/DeleteTransactionsResponseBody.php
+  - src/Models/Operations/DeliveryType.php
   - src/Models/Operations/Entry.php
+  - src/Models/Operations/FromDetails.php
   - src/Models/Operations/GetBankAccountByIdRequest.php
   - src/Models/Operations/GetBankAccountByIdResponse.php
   - src/Models/Operations/GetBankAccountByIdResponseBody.php
-  - src/Models/Operations/GetBurnRateMetricsRequest.php
-  - src/Models/Operations/GetBurnRateMetricsResponse.php
+  - src/Models/Operations/GetBurnRateReportsRequest.php
+  - src/Models/Operations/GetBurnRateReportsResponse.php
   - src/Models/Operations/GetCurrentTimerCustomer.php
   - src/Models/Operations/GetCurrentTimerData.php
   - src/Models/Operations/GetCurrentTimerProject.php
@@ -499,12 +643,18 @@ generatedFiles:
   - src/Models/Operations/GetDocumentByIdRequest.php
   - src/Models/Operations/GetDocumentByIdResponse.php
   - src/Models/Operations/GetDocumentByIdResponseBody.php
-  - src/Models/Operations/GetExpensesMetricsRequest.php
-  - src/Models/Operations/GetExpensesMetricsResponse.php
+  - src/Models/Operations/GetDocumentPreSignedUrlRequest.php
+  - src/Models/Operations/GetDocumentPreSignedUrlResponse.php
+  - src/Models/Operations/GetDocumentPreSignedUrlResponseBody.php
+  - src/Models/Operations/GetExpensesReportsRequest.php
+  - src/Models/Operations/GetExpensesReportsResponse.php
   - src/Models/Operations/GetInboxItemByIdRequest.php
   - src/Models/Operations/GetInboxItemByIdResponse.php
   - src/Models/Operations/GetInboxItemByIdResponseBody.php
   - src/Models/Operations/GetInboxItemByIdTransaction.php
+  - src/Models/Operations/GetInboxPreSignedUrlRequest.php
+  - src/Models/Operations/GetInboxPreSignedUrlResponse.php
+  - src/Models/Operations/GetInboxPreSignedUrlResponseBody.php
   - src/Models/Operations/GetInvoiceByIdCustomer.php
   - src/Models/Operations/GetInvoiceByIdRequest.php
   - src/Models/Operations/GetInvoiceByIdResponse.php
@@ -516,14 +666,18 @@ generatedFiles:
   - src/Models/Operations/GetInvoiceSummaryStatus.php
   - src/Models/Operations/GetInvoicesPaymentStatusResponse.php
   - src/Models/Operations/GetInvoicesPaymentStatusResponseBody.php
-  - src/Models/Operations/GetProfitMetricsRequest.php
-  - src/Models/Operations/GetProfitMetricsResponse.php
-  - src/Models/Operations/GetRevenueMetricsRequest.php
-  - src/Models/Operations/GetRevenueMetricsResponse.php
-  - src/Models/Operations/GetRunwayMetricsRequest.php
-  - src/Models/Operations/GetRunwayMetricsResponse.php
-  - src/Models/Operations/GetSpendingMetricsRequest.php
-  - src/Models/Operations/GetSpendingMetricsResponse.php
+  - src/Models/Operations/GetOAuthAuthorizationRequest.php
+  - src/Models/Operations/GetOAuthAuthorizationResponse.php
+  - src/Models/Operations/GetOAuthAuthorizationResponseBody.php
+  - src/Models/Operations/GetOAuthAuthorizationStatus.php
+  - src/Models/Operations/GetProfitReportsRequest.php
+  - src/Models/Operations/GetProfitReportsResponse.php
+  - src/Models/Operations/GetRevenueReportsRequest.php
+  - src/Models/Operations/GetRevenueReportsResponse.php
+  - src/Models/Operations/GetRunwayReportsRequest.php
+  - src/Models/Operations/GetRunwayReportsResponse.php
+  - src/Models/Operations/GetSpendingReportsRequest.php
+  - src/Models/Operations/GetSpendingReportsResponse.php
   - src/Models/Operations/GetTagByIdRequest.php
   - src/Models/Operations/GetTagByIdResponse.php
   - src/Models/Operations/GetTeamByIdPlan.php
@@ -536,8 +690,14 @@ generatedFiles:
   - src/Models/Operations/GetTimerStatusResponseBody.php
   - src/Models/Operations/GetTrackerProjectByIdRequest.php
   - src/Models/Operations/GetTrackerProjectByIdResponse.php
+  - src/Models/Operations/GetTransactionAttachmentPreSignedUrlRequest.php
+  - src/Models/Operations/GetTransactionAttachmentPreSignedUrlResponse.php
+  - src/Models/Operations/GetTransactionAttachmentPreSignedUrlResponseBody.php
   - src/Models/Operations/GetTransactionByIdRequest.php
   - src/Models/Operations/GetTransactionByIdResponse.php
+  - src/Models/Operations/GrantTypeAuthorizationCode.php
+  - src/Models/Operations/GrantTypeRefreshToken.php
+  - src/Models/Operations/LineItem.php
   - src/Models/Operations/ListBankAccountsData.php
   - src/Models/Operations/ListBankAccountsRequest.php
   - src/Models/Operations/ListBankAccountsResponse.php
@@ -568,6 +728,10 @@ generatedFiles:
   - src/Models/Operations/ListInvoicesResponse.php
   - src/Models/Operations/ListInvoicesResponseBody.php
   - src/Models/Operations/ListInvoicesStatus.php
+  - src/Models/Operations/ListNotificationsRequest.php
+  - src/Models/Operations/ListNotificationsResponse.php
+  - src/Models/Operations/ListNotificationsStatusEnum1.php
+  - src/Models/Operations/ListNotificationsStatusEnum2.php
   - src/Models/Operations/ListTagsResponse.php
   - src/Models/Operations/ListTeamMembersData.php
   - src/Models/Operations/ListTeamMembersRequest.php
@@ -592,12 +756,27 @@ generatedFiles:
   - src/Models/Operations/ListTransactionsResponse.php
   - src/Models/Operations/ListTransactionsResponseBody.php
   - src/Models/Operations/ListTransactionsType.php
+  - src/Models/Operations/Name.php
+  - src/Models/Operations/NoteDetails.php
+  - src/Models/Operations/PaymentDetails.php
+  - src/Models/Operations/PostOAuthAuthorizationRequest.php
+  - src/Models/Operations/PostOAuthAuthorizationResponse.php
+  - src/Models/Operations/PostOAuthAuthorizationResponseBody.php
+  - src/Models/Operations/PostOAuthRevokeRequest.php
+  - src/Models/Operations/PostOAuthRevokeResponse.php
+  - src/Models/Operations/PostOAuthRevokeResponseBody.php
+  - src/Models/Operations/PostOAuthTokenResponse.php
+  - src/Models/Operations/PostOAuthTokenResponseBody.php
+  - src/Models/Operations/RefreshToken.php
   - src/Models/Operations/RequestBody.php
+  - src/Models/Operations/ResponseType.php
   - src/Models/Operations/Result.php
   - src/Models/Operations/Role.php
+  - src/Models/Operations/Scope.php
   - src/Models/Operations/SearchRequest.php
   - src/Models/Operations/SearchResponse.php
   - src/Models/Operations/SearchResponseBody.php
+  - src/Models/Operations/Size.php
   - src/Models/Operations/StartTimerCustomer.php
   - src/Models/Operations/StartTimerData.php
   - src/Models/Operations/StartTimerProject.php
@@ -612,7 +791,15 @@ generatedFiles:
   - src/Models/Operations/StopTimerResponse.php
   - src/Models/Operations/StopTimerResponseBody.php
   - src/Models/Operations/StopTimerUser.php
+  - src/Models/Operations/Template.php
+  - src/Models/Operations/TemplateDeliveryType.php
+  - src/Models/Operations/TemplateFromDetails.php
+  - src/Models/Operations/TemplatePaymentDetails.php
+  - src/Models/Operations/TokenType.php
+  - src/Models/Operations/TokenTypeHint.php
+  - src/Models/Operations/TopBlock.php
   - src/Models/Operations/TrackerProject.php
+  - src/Models/Operations/UpdateAllNotificationsStatusResponse.php
   - src/Models/Operations/UpdateBankAccountRequest.php
   - src/Models/Operations/UpdateBankAccountRequestBody.php
   - src/Models/Operations/UpdateBankAccountResponse.php
@@ -635,6 +822,17 @@ generatedFiles:
   - src/Models/Operations/UpdateInboxItemResponseBody.php
   - src/Models/Operations/UpdateInboxItemStatus.php
   - src/Models/Operations/UpdateInboxItemTransaction.php
+  - src/Models/Operations/UpdateInvoiceCustomer.php
+  - src/Models/Operations/UpdateInvoiceRequest.php
+  - src/Models/Operations/UpdateInvoiceRequestBody.php
+  - src/Models/Operations/UpdateInvoiceResponse.php
+  - src/Models/Operations/UpdateInvoiceResponseBody.php
+  - src/Models/Operations/UpdateInvoiceStatusRequest.php
+  - src/Models/Operations/UpdateInvoiceStatusResponse.php
+  - src/Models/Operations/UpdateNotificationStatusRequest.php
+  - src/Models/Operations/UpdateNotificationStatusRequestBody.php
+  - src/Models/Operations/UpdateNotificationStatusResponse.php
+  - src/Models/Operations/UpdateNotificationStatusStatus.php
   - src/Models/Operations/UpdateTagRequest.php
   - src/Models/Operations/UpdateTagRequestBody.php
   - src/Models/Operations/UpdateTagResponse.php
@@ -667,6 +865,9 @@ generatedFiles:
   - src/Models/Operations/UpdateTransactionsResponse.php
   - src/Models/Operations/UpdateTransactionsResponseBody.php
   - src/Models/Operations/UpdateTransactionsStatus.php
+  - src/Notifications.php
+  - src/OAuth.php
+  - src/Reports.php
   - src/SDKConfiguration.php
   - src/Search.php
   - src/Tags.php
@@ -1032,7 +1233,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"id": "b3b7e6e2-8c2a-4e2a-9b1a-2e4b5c6d7f8a", "status": "paid", "dueDate": "2024-06-30T23:59:59.000Z", "issueDate": "2024-06-01T00:00:00.000Z", "invoiceNumber": "INV-2024-001", "amount": 1500.75, "currency": "USD", "customer": {"id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "name": "Acme Corporation", "website": "https://acme.com", "email": "info@acme.com"}, "paidAt": "2024-06-15T12:00:00.000Z", "reminderSentAt": "2024-06-10T09:00:00.000Z", "note": "Thank you for your business.", "vat": 120, "tax": 80, "discount": 50, "subtotal": 1400, "viewedAt": "2024-06-05T14:30:00.000Z", "customerName": "Acme Corporation", "sentTo": "billing@acme.com", "sentAt": "2024-06-02T08:00:00.000Z", "createdAt": "2024-06-01T07:00:00.000Z", "updatedAt": "2024-06-15T10:00:00.000Z"}
+          application/json: {"id": "b3b7e6e2-8c2a-4e2a-9b1a-2e4b5c6d7f8a", "status": "paid", "dueDate": "2024-06-30T23:59:59.000Z", "issueDate": "2024-06-01T00:00:00.000Z", "invoiceNumber": "INV-2024-001", "amount": 1500.75, "currency": "USD", "customer": {"id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "name": "Acme Corporation", "website": "https://acme.com", "email": "info@acme.com"}, "paidAt": "2024-06-15T12:00:00.000Z", "reminderSentAt": "2024-06-10T09:00:00.000Z", "note": "Thank you for your business.", "vat": 120, "tax": 80, "discount": 50, "subtotal": 1400, "viewedAt": "2024-06-05T14:30:00.000Z", "customerName": "Acme Corporation", "sentTo": "billing@acme.com", "sentAt": "2024-06-02T08:00:00.000Z", "createdAt": "2024-06-01T07:00:00.000Z", "updatedAt": "2024-06-15T10:00:00.000Z", "pdfUrl": "https://app.midday.ai/api/download/invoice?token=eef58951-1682-4062-b010-425866032390", "previewUrl": "https://app.midday.ai/i/eef58951-1682-4062-b010-425866032390"}
   deleteInvoice:
     speakeasy-default-delete-invoice:
       parameters:
@@ -1240,6 +1441,214 @@ examples:
       responses:
         "200":
           application/json: {"data": {"isRunning": true, "currentEntry": {"id": "a26a5a54-1e28-4c83-b854-2821b87e4a97", "start": "<value>", "description": "brr debit greedy lasting because offset outset generously", "projectId": "f2d14591-a762-4edc-b444-ff2f1ff3b4b8", "trackerProject": {"id": "2cabaa5d-6000-419b-b904-099b57ddc208", "name": "<value>"}}, "elapsedTime": 1800}}
+  getOAuthAuthorization:
+    speakeasy-default-get-O-auth-authorization:
+      parameters:
+        query:
+          response_type: "code"
+          client_id: "mid_client_abcdef123456789"
+          redirect_uri: "https://myapp.com/callback"
+          scope: "transactions.read invoices.read"
+          state: "abc123xyz789_secure-random-state-value-with-sufficient-entropy"
+          code_challenge: "E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM"
+      responses:
+        "200":
+          application/json: {"id": "123e4567-e89b-12d3-a456-426614174000", "name": "My Raycast Extension", "description": "A Raycast extension for managing transactions", "overview": "This application provides advanced transaction management features including:\n- Real-time sync\n- Advanced filtering", "developerName": "Acme Corp", "logoUrl": "https://example.com/logo.png", "website": "https://myapp.com", "installUrl": "https://myapp.com/install", "screenshots": ["https://example.com/screenshot1.png", "https://example.com/screenshot2.png"], "clientId": "mid_client_abcdef123456789", "scopes": ["transactions.read", "invoices.read"], "redirectUri": "https://myapp.com/callback", "state": "abc123xyz789_secure-random-state-value-with-sufficient-entropy", "status": "approved"}
+        "400":
+          application/json: {"error": "invalid_request", "error_description": "The request is missing a required parameter", "error_uri": "https://docs.midday.ai/errors/invalid_request", "state": "abc123xyz789_secure-random-state-value-with-sufficient-entropy"}
+  postOAuthAuthorization:
+    speakeasy-default-post-O-auth-authorization:
+      requestBody:
+        application/json: {"client_id": "mid_client_abcdef123456789", "decision": "allow", "scopes": ["transactions.read", "invoices.read"], "redirect_uri": "https://myapp.com/callback", "state": "abc123xyz789_secure-random-state-value-with-sufficient-entropy", "code_challenge": "E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM", "teamId": "123e4567-e89b-12d3-a456-426614174000"}
+      responses:
+        "200":
+          application/json: {"redirect_url": "https://trained-outset.info"}
+        "400":
+          application/json: {"redirect_url": "https://young-ferret.name/"}
+        "401":
+          application/json: {"redirect_url": "https://impressive-giant.info"}
+  postOAuthToken:
+    speakeasy-default-post-O-auth-token:
+      requestBody:
+        application/json: {"grant_type": "refresh_token", "refresh_token": "mid_rt_abcdef123456789", "client_id": "mid_client_abcdef123456789", "client_secret": "mid_secret_abcdef123456789", "scope": "transactions.read invoices.read"}
+        application/x-www-form-urlencoded: {"grant_type": "refresh_token", "refresh_token": "mid_rt_abcdef123456789", "client_id": "mid_client_abcdef123456789", "client_secret": "mid_secret_abcdef123456789", "scope": "transactions.read invoices.read"}
+      responses:
+        "200":
+          application/json: {"access_token": "mid_access_token_abcdef123456789", "token_type": "Bearer", "expires_in": 3600, "refresh_token": "mid_refresh_token_abcdef123456789", "scope": "transactions.read invoices.read"}
+        "400":
+          application/json: {"error": "invalid_request", "error_description": "The request is missing a required parameter", "error_uri": "https://docs.midday.ai/errors/invalid_request", "state": "abc123xyz789_secure-random-state-value-with-sufficient-entropy"}
+  postOAuthRevoke:
+    speakeasy-default-post-O-auth-revoke:
+      requestBody:
+        application/json: {"token": "mid_access_token_abcdef123456789", "token_type_hint": "access_token", "client_id": "mid_client_abcdef123456789", "client_secret": "mid_secret_abcdef123456789"}
+        application/x-www-form-urlencoded: {"token": "mid_access_token_abcdef123456789", "token_type_hint": "access_token", "client_id": "mid_client_abcdef123456789", "client_secret": "mid_secret_abcdef123456789"}
+      responses:
+        "200":
+          application/json: {"success": true}
+  listNotifications:
+    speakeasy-default-list-notifications:
+      parameters:
+        query:
+          cursor: "20"
+          pageSize: 20
+          status: ["unread", "read"]
+          userId: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+          priority: 5
+          maxPriority: 3
+      responses:
+        "200":
+          application/json: {"data": [], "meta": {"cursor": "40", "hasPreviousPage": true, "hasNextPage": false}}
+  updateNotificationStatus:
+    speakeasy-default-update-notification-status:
+      parameters:
+        path:
+          notificationId: "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2"
+      requestBody:
+        application/json: {"status": "read"}
+      responses:
+        "200":
+          application/json: {"data": {"id": "b3b6e2c2-1f2a-4e3b-9c1d-2a4b6e2c21f2", "createdAt": "2024-04-15T09:00:00.000Z", "teamId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "userId": "c2d3e4f5-a6b7-8901-bcde-f23456789012", "type": "transactions_created", "priority": 3, "source": "system", "status": "unread", "metadata": {"transactionCount": 5, "dateRange": {"from": "2024-04-01", "to": "2024-04-15"}}, "lastUsedAt": "2024-04-15T11:00:00.000Z"}}
+  updateAllNotificationsStatus:
+    speakeasy-default-update-all-notifications-status:
+      requestBody:
+        application/json: {"status": "read"}
+      responses:
+        "200":
+          application/json: {"data": []}
+  getTransactionAttachmentPreSignedUrl:
+    speakeasy-default-get-transaction-attachment-pre-signed-url:
+      parameters:
+        path:
+          transactionId: "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4"
+          attachmentId: "a43dc3a5-6925-4d91-ac9c-4c1a34bdb388"
+        query:
+          download: true
+      responses:
+        "200":
+          application/json: {"url": "https://service.midday.ai/storage/v1/object/sign/vault/transactions/receipt.pdf?token=abc123&expires=1640995200", "expiresAt": "2024-04-15T10:01:00.000Z", "fileName": "receipt.pdf"}
+        "400":
+          application/json: {"error": "<value>"}
+        "404":
+          application/json: {"error": "<value>"}
+        "500":
+          application/json: {"error": "<value>"}
+  getDocumentPreSignedUrl:
+    speakeasy-default-get-document-pre-signed-url:
+      parameters:
+        path:
+          id: "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4"
+        query:
+          download: true
+      responses:
+        "200":
+          application/json: {"url": "https://service.midday.ai/storage/v1/object/sign/vault/documents/2024/invoice.pdf?token=abc123&expires=1640995200", "expiresAt": "2024-04-15T10:01:00.000Z", "fileName": "invoice-april-2024.pdf"}
+        "400":
+          application/json: {"error": "<value>"}
+        "404":
+          application/json: {"error": "<value>"}
+        "500":
+          application/json: {"error": "<value>"}
+  getInboxPreSignedUrl:
+    speakeasy-default-get-inbox-pre-signed-url:
+      parameters:
+        path:
+          id: "b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4"
+        query:
+          download: true
+      responses:
+        "200":
+          application/json: {"url": "https://service.midday.ai/storage/v1/object/sign/vault/inbox/document.pdf?token=abc123&expires=1640995200", "expiresAt": "2024-04-15T10:01:00.000Z", "fileName": "invoice.pdf"}
+        "400":
+          application/json: {"error": "<value>"}
+        "404":
+          application/json: {"error": "<value>"}
+        "500":
+          application/json: {"error": "<value>"}
+  createInvoice:
+    speakeasy-default-create-invoice:
+      requestBody:
+        application/json: {"template": {"customerLabel": "Bill To", "title": "Invoice", "fromLabel": "From", "invoiceNoLabel": "Invoice #", "issueDateLabel": "Issue Date", "dueDateLabel": "Due Date", "descriptionLabel": "Description", "priceLabel": "Rate", "quantityLabel": "Qty", "totalLabel": "Amount", "totalSummaryLabel": "Total", "vatLabel": "VAT", "taxLabel": "Sales Tax", "discountLabel": "Discount", "timezone": "America/Los_Angeles", "paymentLabel": "Payment Information", "noteLabel": "Notes", "logoUrl": "https://example.com/logo.png", "currency": "USD", "dateFormat": "MM/dd/yyyy", "includeVat": false, "includeTax": true, "includeDiscount": false, "includeDecimals": true, "includePdf": true, "sendCopy": true, "includeUnits": true, "includeQr": false, "taxRate": 8.5, "vatRate": 0, "size": "letter", "deliveryType": "create", "locale": "en-US", "paymentDetails": {}, "fromDetails": {}}, "fromDetails": {}, "customerId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "paymentDetails": {}, "noteDetails": {}, "dueDate": "2024-07-15T23:59:59.000Z", "issueDate": "2024-06-15T00:00:00.000Z", "invoiceNumber": "INV-2024-001", "logoUrl": "https://example.com/logo.png", "tax": 85, "topBlock": {}, "bottomBlock": {}, "amount": 1085, "lineItems": [{"quantity": 40, "price": 75, "tax": 8.5, "name": {}}, {"quantity": 20, "price": 50, "tax": 8.5, "name": {}}], "deliveryType": "create", "scheduledAt": "2024-07-01T09:00:00.000Z"}
+      responses:
+        "201":
+          application/json: {"id": "b3b7e6e2-8c2a-4e2a-9b1a-2e4b5c6d7f8a", "status": "draft", "createdAt": "2024-06-01T07:00:00.000Z", "updatedAt": "2024-06-01T07:00:00.000Z", "pdfUrl": "https://app.midday.ai/api/download/invoice?token=eyJ...", "previewUrl": "https://app.midday.ai/i/eyJ..."}
+        "400":
+          application/json: {"message": "scheduledAt is required for scheduled delivery"}
+        "404":
+          application/json: {"message": "Customer not found"}
+        "409":
+          application/json: {"message": "Invoice number 'INV-2024-001' is already used. Please provide a different invoice number or omit it to auto-generate one."}
+        "500":
+          application/json: {"message": "Failed to create invoice"}
+  updateInvoice:
+    speakeasy-default-update-invoice:
+      parameters:
+        path:
+          id: "<id>"
+      requestBody:
+        application/json: {"status": "paid", "paidAt": "2024-06-15T12:00:00.000Z", "internalNote": "Payment received via bank transfer"}
+      responses:
+        "200":
+          application/json: {"id": "b3b7e6e2-8c2a-4e2a-9b1a-2e4b5c6d7f8a", "status": "paid", "dueDate": "2024-06-30T23:59:59.000Z", "issueDate": "2024-06-01T00:00:00.000Z", "invoiceNumber": "INV-2024-001", "amount": 1500.75, "currency": "USD", "customer": {"id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "name": "Acme Corporation", "website": "https://acme.com", "email": "info@acme.com"}, "paidAt": "2024-06-15T12:00:00.000Z", "reminderSentAt": "2024-06-10T09:00:00.000Z", "note": "Thank you for your business.", "vat": 120, "tax": 80, "discount": 50, "subtotal": 1400, "viewedAt": "2024-06-05T14:30:00.000Z", "customerName": "Acme Corporation", "sentTo": "billing@acme.com", "sentAt": "2024-06-02T08:00:00.000Z", "createdAt": "2024-06-01T07:00:00.000Z", "updatedAt": "2024-06-15T10:00:00.000Z", "pdfUrl": "https://app.midday.ai/api/download/invoice?token=eef58951-1682-4062-b010-425866032390", "previewUrl": "https://app.midday.ai/i/eef58951-1682-4062-b010-425866032390"}
+  getRevenueReports:
+    speakeasy-default-get-revenue-reports:
+      parameters:
+        query:
+          from: "2023-01-01"
+          to: "2023-12-31"
+          currency: "USD"
+      responses:
+        "200":
+          application/json: {"summary": {"currentTotal": 10000, "prevTotal": 8000, "currency": "USD"}, "meta": {"type": "revenue", "currency": "USD"}, "result": []}
+  getProfitReports:
+    speakeasy-default-get-profit-reports:
+      parameters:
+        query:
+          from: "2023-01-01"
+          to: "2023-12-31"
+          currency: "USD"
+      responses:
+        "200":
+          application/json: {"summary": {"currentTotal": 10000, "prevTotal": 8000, "currency": "USD"}, "meta": {"type": "profit", "currency": "USD"}, "result": [{"date": "2023-01-31", "percentage": {"value": 25, "status": "positive"}, "current": {"date": "2023-01-31", "value": 1000, "currency": "USD"}, "previous": {"date": "2022-01-31", "value": 800, "currency": "USD"}}]}
+  getBurnRateReports:
+    speakeasy-default-get-burn-rate-reports:
+      parameters:
+        query:
+          from: "2023-01-01"
+          to: "2023-12-31"
+          currency: "USD"
+      responses:
+        "200":
+          application/json: [{"date": "2024-01-01", "value": 647366.44, "currency": "SEK"}]
+  getRunwayReports:
+    speakeasy-default-get-runway-reports:
+      parameters:
+        query:
+          from: "2023-01-01"
+          to: "2023-12-31"
+          currency: "USD"
+      responses:
+        "200":
+          application/json: 12
+  getExpensesReports:
+    speakeasy-default-get-expenses-reports:
+      parameters:
+        query:
+          from: "2023-01-01"
+          to: "2023-12-31"
+          currency: "USD"
+      responses:
+        "200":
+          application/json: {"summary": {"averageExpense": 121054.86, "currency": "SEK"}, "meta": {"type": "expense", "currency": "SEK"}, "result": [{"date": "2024-01-01 00:00:00", "value": 637898.68, "currency": "SEK", "recurring": 9467.76, "total": 647366.44}]}
+  getSpendingReports:
+    speakeasy-default-get-spending-reports:
+      parameters:
+        query:
+          from: "2023-01-01"
+          to: "2023-12-31"
+          currency: "USD"
+      responses:
+        "200":
+          application/json: [{"name": "Taxes", "slug": "taxes", "amount": -1256445, "currency": "SEK", "color": "#8492A6", "percentage": 44}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## SDK Changes Detected:\n* `midday->metrics->revenue()`:  `response.result->[]` **Changed** **Breaking** :warning:\n* `midday->tracker entries->list()`:  `response.result->{}->[]->project` **Changed** **Breaking** :warning:\n* `midday->metrics->profit()`:  `response.result->[]` **Changed** **Breaking** :warning:\n* `midday->transactions->update()`:  `response` **Changed**\n* `midday->transactions->updateMany()`:  `response.data->[]` **Changed**\n* `midday->tracker timer->stopTimer()`: **Added**\n* `midday->tracker timer->getCurrentTimer()`: **Added**\n* `midday->tracker timer->getTimerStatus()`: **Added**\n* `midday->tracker->delete()`: **Deleted** **Breaking** :warning:\n* `midday->transactions->list()`:  `response.data->[]` **Changed**\n* `midday->transactions->create()`:  `response` **Changed**\n* `midday->transactions->get()`:  `response` **Changed**\n* `midday->tracker entries->create()`: **Added**\n* `midday->transactions->createMany()`:  `response.[]` **Changed**\n* `midday->tracker timer->startTimer()`: **Added**\n* `midday->teams->update()`: \n  *  `requestBody->countryCode` **Added**\n* `midday->users->get()`:  `response.timezoneAutoSync` **Added**\n* `midday->users->update()`: \n  *  `request->timezoneAutoSync` **Added**\n  *  `response.timezoneAutoSync` **Added**\n* `midday->customers->list()`:  `response.data->[]->billingEmail` **Added**\n* `midday->customers->create()`: \n  *  `request->billingEmail` **Added**\n  *  `response.billingEmail` **Added**\n* `midday->customers->get()`:  `response.billingEmail` **Added**\n* `midday->customers->delete()`:  `response.billingEmail` **Added**\n* `midday->customers->update()`: \n  *  `requestBody->billingEmail` **Added**\n  *  `response.billingEmail` **Added**\n* `midday->inbox->update()`:  `requestBody` **Changed**\n* `midday->tracker entries->update()`: **Added**\n* `midday->tracker entries->delete()`: **Added**\n* `midday->tracker entries->createBulk()`: **Added**\n"
+releaseNotes: "## Php SDK Changes Detected:\n* `midday->invoices->list()`:  `response.data->[]` **Changed** **Breaking** :warning:\n* `midday->invoices->get()`:  `response` **Changed** **Breaking** :warning:\n* `midday->reports->burn-rate()`: **Added**\n* `midday->metrics->runway()`: **Deleted** **Breaking** :warning:\n* `midday->notifications->list()`: **Added**\n* `midday->notifications->updateStatus()`: **Added**\n* `midday->notifications->updateAllStatus()`: **Added**\n* `midday->transactions->getAttachmentPreSignedUrl()`: **Added**\n* `midday->documents->getPreSignedUrl()`: **Added**\n* `midday->inbox->getPreSignedUrl()`: **Added**\n* `midday->invoices->create()`: **Added**\n* `midday->invoices->update()`: **Added**\n* `midday->reports->revenue()`: **Added**\n* `midday->reports->profit()`: **Added**\n* `midday->oauth->getOAuthAuthorization()`: **Added**\n* `midday->reports->runway()`: **Added**\n* `midday->oauth->postOAuthRevoke()`: **Added**\n* `midday->metrics->revenue()`: **Deleted** **Breaking** :warning:\n* `midday->reports->expenses()`: **Added**\n* `midday->metrics->profit()`: **Deleted** **Breaking** :warning:\n* `midday->metrics->burn-rate()`: **Deleted** **Breaking** :warning:\n* `midday->reports->spending()`: **Added**\n* `midday->metrics->expenses()`: **Deleted** **Breaking** :warning:\n* `midday->metrics->spending()`: **Deleted** **Breaking** :warning:\n* `midday->inbox->list()`: \n  *  `request->status` **Changed**\n* `midday->oauth->postOAuthToken()`: **Added**\n* `midday->oauth->postOAuthAuthorization()`: **Added**\n* `midday->search->search()`: \n  *  `request->relevanceThreshold` **Changed**\n* `midday->tracker entries->create()`: \n  *  `request->assignedId` **Changed**\n* `midday->tracker entries->createBulk()`: \n  *  `request->entries->[]->assignedId` **Changed**\n* `midday->tracker entries->update()`: \n  *  `requestBody->assignedId` **Changed**\n"

@@ -20,11 +20,14 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
+use Midday\Midday\Models\Components;
 use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
-        'MIDDAY_API_KEY'
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
     )
     ->build();
 

@@ -1,0 +1,11 @@
+# CreateInvoiceBadRequestException
+
+Bad request. Invalid input data or validation errors.
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  | Example                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `message`                                                                                                    | *string*                                                                                                     | :heavy_check_mark:                                                                                           | Error message describing the validation failure                                                              | scheduledAt is required for scheduled delivery                                                               |
+| `rawResponse`                                                                                                | [\Psr\Http\Message\ResponseInterface](https://www.php-fig.org/psr/psr-7/#33-psrhttpmessageresponseinterface) | :heavy_minus_sign:                                                                                           | Raw HTTP response; suitable for custom response parsing                                                      |                                                                                                              |
