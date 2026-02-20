@@ -36,14 +36,11 @@ class MiddayBuilder
     /**
      * setSecurity is used to configure the security required for the SDK.
      *
-     * @param  string  $token
+     * @param  Models\Components\Security  $security
      * @return MiddayBuilder
      */
-    public function setSecurity(string $token): MiddayBuilder
+    public function setSecurity(Models\Components\Security $security): MiddayBuilder
     {
-        $security = new Models\Components\Security(
-            token: $token
-        );
         $this->sdkConfig->securitySource = fn () => $security;
 
         return $this;
@@ -53,12 +50,12 @@ class MiddayBuilder
      * setSecuritySource is usd to configure the security required for the SDK.
      * unlike setSecurity, setSecuritySource accepts a closure that will be called to retrieve the security information.
      *
-     * @param  pure-Closure(): string  $securitySource
+     * @param  pure-Closure(): Models\Components\Security  $securitySource
      * @return MiddayBuilder
      */
     public function setSecuritySource(\Closure $securitySource): MiddayBuilder
     {
-        $this->sdkConfig->securitySource = fn () => new Models\Components\Security(token: $securitySource());
+        $this->sdkConfig->securitySource = $securitySource;
 
         return $this;
     }

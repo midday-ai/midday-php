@@ -46,14 +46,6 @@ class ListInvoicesData
     public string $issueDate;
 
     /**
-     * Invoice number as shown to the customer
-     *
-     * @var string $invoiceNumber
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('invoiceNumber')]
-    public string $invoiceNumber;
-
-    /**
      * Total amount of the invoice
      *
      * @var float $amount
@@ -70,15 +62,6 @@ class ListInvoicesData
     public string $currency;
 
     /**
-     * Customer details
-     *
-     * @var ListInvoicesCustomer $customer
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Midday\Midday\Models\Operations\ListInvoicesCustomer')]
-    public ListInvoicesCustomer $customer;
-
-    /**
      * Timestamp when the invoice was created (ISO 8601)
      *
      * @var string $createdAt
@@ -93,6 +76,24 @@ class ListInvoicesData
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updatedAt')]
     public string $updatedAt;
+
+    /**
+     * Invoice number as shown to the customer (auto-generated if not provided)
+     *
+     * @var ?string $invoiceNumber
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('invoiceNumber')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $invoiceNumber = null;
+
+    /**
+     * Customer details
+     *
+     * @var ?ListInvoicesCustomer $customer
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Midday\Midday\Models\Operations\ListInvoicesCustomer|null')]
+    public ?ListInvoicesCustomer $customer;
 
     /**
      * Timestamp when the invoice was paid (ISO 8601), or null if unpaid
@@ -183,16 +184,32 @@ class ListInvoicesData
     public ?string $sentAt;
 
     /**
+     * URL to download the invoice PDF, or null if not generated
+     *
+     * @var ?string $pdfUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('pdfUrl')]
+    public ?string $pdfUrl;
+
+    /**
+     * URL to preview the invoice in the browser, or null if not generated
+     *
+     * @var ?string $previewUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('previewUrl')]
+    public ?string $previewUrl;
+
+    /**
      * @param  string  $id
      * @param  ListInvoicesStatus  $status
      * @param  string  $dueDate
      * @param  string  $issueDate
-     * @param  string  $invoiceNumber
      * @param  float  $amount
      * @param  string  $currency
-     * @param  ListInvoicesCustomer  $customer
      * @param  string  $createdAt
      * @param  string  $updatedAt
+     * @param  ?string  $invoiceNumber
+     * @param  ?ListInvoicesCustomer  $customer
      * @param  ?string  $paidAt
      * @param  ?string  $reminderSentAt
      * @param  ?string  $note
@@ -204,20 +221,22 @@ class ListInvoicesData
      * @param  ?string  $customerName
      * @param  ?string  $sentTo
      * @param  ?string  $sentAt
+     * @param  ?string  $pdfUrl
+     * @param  ?string  $previewUrl
      * @phpstan-pure
      */
-    public function __construct(string $id, ListInvoicesStatus $status, string $dueDate, string $issueDate, string $invoiceNumber, float $amount, string $currency, ListInvoicesCustomer $customer, string $createdAt, string $updatedAt, ?string $paidAt = null, ?string $reminderSentAt = null, ?string $note = null, ?float $vat = null, ?float $tax = null, ?float $discount = null, ?float $subtotal = null, ?string $viewedAt = null, ?string $customerName = null, ?string $sentTo = null, ?string $sentAt = null)
+    public function __construct(string $id, ListInvoicesStatus $status, string $dueDate, string $issueDate, float $amount, string $currency, string $createdAt, string $updatedAt, ?string $invoiceNumber = null, ?ListInvoicesCustomer $customer = null, ?string $paidAt = null, ?string $reminderSentAt = null, ?string $note = null, ?float $vat = null, ?float $tax = null, ?float $discount = null, ?float $subtotal = null, ?string $viewedAt = null, ?string $customerName = null, ?string $sentTo = null, ?string $sentAt = null, ?string $pdfUrl = null, ?string $previewUrl = null)
     {
         $this->id = $id;
         $this->status = $status;
         $this->dueDate = $dueDate;
         $this->issueDate = $issueDate;
-        $this->invoiceNumber = $invoiceNumber;
         $this->amount = $amount;
         $this->currency = $currency;
-        $this->customer = $customer;
         $this->createdAt = $createdAt;
         $this->updatedAt = $updatedAt;
+        $this->invoiceNumber = $invoiceNumber;
+        $this->customer = $customer;
         $this->paidAt = $paidAt;
         $this->reminderSentAt = $reminderSentAt;
         $this->note = $note;
@@ -229,5 +248,7 @@ class ListInvoicesData
         $this->customerName = $customerName;
         $this->sentTo = $sentTo;
         $this->sentAt = $sentAt;
+        $this->pdfUrl = $pdfUrl;
+        $this->previewUrl = $previewUrl;
     }
 }
