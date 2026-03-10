@@ -3,7 +3,8 @@
 
 ## Values
 
-| Name      | Value     |
-| --------- | --------- |
-| `Done`    | done      |
-| `Pending` | pending   |
+| Name             | Value            |
+| ---------------- | ---------------- |
+| `Done`           | done             |
+| `Pending`        | pending          |
+| `SuggestedMatch` | suggested_match  |

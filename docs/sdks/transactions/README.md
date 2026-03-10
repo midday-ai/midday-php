@@ -1,5 +1,4 @@
 # Transactions
-(*transactions*)
 
 ## Overview
 
@@ -10,6 +9,7 @@
 * [get](#get) - Retrieve a transaction
 * [delete](#delete) - Delete a transaction
 * [update](#update) - Update a transaction
+* [getAttachmentPreSignedUrl](#getattachmentpresignedurl) - Generate pre-signed URL for transaction attachment
 * [createMany](#createmany) - Bulk create transactions
 * [deleteMany](#deletemany) - Bulk delete transactions
 * [updateMany](#updatemany) - Bulk update transactions
@@ -27,11 +27,14 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
+use Midday\Midday\Models\Components;
 use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
-        'MIDDAY_API_KEY'
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
     )
     ->build();
 
@@ -119,10 +122,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
+use Midday\Midday\Models\Components;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
-        'MIDDAY_API_KEY'
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
     )
     ->build();
 
@@ -166,10 +172,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
+use Midday\Midday\Models\Components;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
-        'MIDDAY_API_KEY'
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
     )
     ->build();
 
@@ -213,10 +222,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
+use Midday\Midday\Models\Components;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
-        'MIDDAY_API_KEY'
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
     )
     ->build();
 
@@ -260,10 +272,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
+use Midday\Midday\Models\Components;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
-        'MIDDAY_API_KEY'
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
     )
     ->build();
 
@@ -297,6 +312,64 @@ if ($response->transactionResponse !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\APIException | 4XX, 5XX            | \*/\*               |
 
+## getAttachmentPreSignedUrl
+
+Generate a pre-signed URL for accessing a transaction attachment. The URL is valid for 60 seconds and allows secure temporary access to the attachment file.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getTransactionAttachmentPreSignedUrl" method="post" path="/transactions/{transactionId}/attachments/{attachmentId}/presigned-url" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Midday\Midday;
+use Midday\Midday\Models\Components;
+
+$sdk = Midday\Midday::builder()
+    ->setSecurity(
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
+    )
+    ->build();
+
+
+
+$response = $sdk->transactions->getAttachmentPreSignedUrl(
+    transactionId: 'b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4',
+    attachmentId: 'a43dc3a5-6925-4d91-ac9c-4c1a34bdb388',
+    download: true
+
+);
+
+if ($response->object !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                            | Type                                 | Required                             | Description                          | Example                              |
+| ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ |
+| `transactionId`                      | *string*                             | :heavy_check_mark:                   | N/A                                  | b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4 |
+| `attachmentId`                       | *string*                             | :heavy_check_mark:                   | N/A                                  | a43dc3a5-6925-4d91-ac9c-4c1a34bdb388 |
+| `download`                           | *?bool*                              | :heavy_minus_sign:                   | N/A                                  | true                                 |
+
+### Response
+
+**[?Operations\GetTransactionAttachmentPreSignedUrlResponse](../../Models/Operations/GetTransactionAttachmentPreSignedUrlResponse.md)**
+
+### Errors
+
+| Error Type                                                     | Status Code                                                    | Content Type                                                   |
+| -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
+| Errors\GetTransactionAttachmentPreSignedUrlBadRequestException | 400                                                            | application/json                                               |
+| Errors\GetTransactionAttachmentPreSignedUrlNotFoundException   | 404                                                            | application/json                                               |
+| Errors\GetTransactionAttachmentPreSignedUrlInternalServerError | 500                                                            | application/json                                               |
+| Errors\APIException                                            | 4XX, 5XX                                                       | \*/\*                                                          |
+
 ## createMany
 
 Bulk create transactions for the authenticated team.
@@ -310,10 +383,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
+use Midday\Midday\Models\Components;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
-        'MIDDAY_API_KEY'
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
     )
     ->build();
 
@@ -357,10 +433,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
+use Midday\Midday\Models\Components;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
-        'MIDDAY_API_KEY'
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
     )
     ->build();
 
@@ -404,10 +483,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
+use Midday\Midday\Models\Components;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
-        'MIDDAY_API_KEY'
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
     )
     ->build();
 

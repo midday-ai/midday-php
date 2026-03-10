@@ -18,6 +18,10 @@ class Midday
         'https://api.midday.ai',
     ];
 
+    public OAuth $oAuth;
+
+    public Notifications $notifications;
+
     public Transactions $transactions;
 
     public Teams $teams;
@@ -38,7 +42,7 @@ class Midday
 
     public Search $search;
 
-    public Metrics $metrics;
+    public Reports $reports;
 
     public TrackerProjects $trackerProjects;
 
@@ -62,6 +66,8 @@ class Midday
     public function __construct(
         public SDKConfiguration $sdkConfiguration,
     ) {
+        $this->oAuth = new OAuth($this->sdkConfiguration);
+        $this->notifications = new Notifications($this->sdkConfiguration);
         $this->transactions = new Transactions($this->sdkConfiguration);
         $this->teams = new Teams($this->sdkConfiguration);
         $this->users = new Users($this->sdkConfiguration);
@@ -72,7 +78,7 @@ class Midday
         $this->inbox = new Inbox($this->sdkConfiguration);
         $this->invoices = new Invoices($this->sdkConfiguration);
         $this->search = new Search($this->sdkConfiguration);
-        $this->metrics = new Metrics($this->sdkConfiguration);
+        $this->reports = new Reports($this->sdkConfiguration);
         $this->trackerProjects = new TrackerProjects($this->sdkConfiguration);
         $this->trackerEntries = new TrackerEntries($this->sdkConfiguration);
         $this->trackerTimer = new TrackerTimer($this->sdkConfiguration);
