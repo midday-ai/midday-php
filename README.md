@@ -55,61 +55,27 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
+use Midday\Midday\Models\Components;
 use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
-        'MIDDAY_API_KEY'
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
     )
     ->build();
 
-$request = new Operations\ListTransactionsRequest(
-    cursor: 'eyJpZCI6IjEyMyJ9',
-    sort: [
-        'date',
-        'desc',
-    ],
-    pageSize: 50,
-    q: 'office supplies',
-    categories: [
-        'office-supplies',
-        'travel',
-    ],
-    tags: [
-        'tag-1',
-        'tag-2',
-    ],
-    start: '2024-04-01T00:00:00.000Z',
-    end: '2024-04-30T23:59:59.999Z',
-    accounts: [
-        'account-1',
-        'account-2',
-    ],
-    assignees: [
-        'user-1',
-        'user-2',
-    ],
-    statuses: [
-        'pending',
-        'completed',
-    ],
-    recurring: [
-        'monthly',
-        'annually',
-    ],
-    attachments: Operations\Attachments::Include,
-    amountRange: [
-        100,
-        1000,
-    ],
-    amount: [
-        '150.75',
-        '299.99',
-    ],
-    type: Operations\ListTransactionsType::Expense,
+$request = new Operations\GetOAuthAuthorizationRequest(
+    responseType: Operations\ResponseType::Code,
+    clientId: 'mid_client_abcdef123456789',
+    redirectUri: 'https://myapp.com/callback',
+    scope: 'transactions.read invoices.read',
+    state: 'abc123xyz789_secure-random-state-value-with-sufficient-entropy',
+    codeChallenge: 'E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM',
 );
 
-$response = $sdk->transactions->list(
+$response = $sdk->oAuth->getOAuthAuthorization(
     request: $request
 );
 
@@ -124,74 +90,41 @@ if ($response->object !== null) {
 
 ### Per-Client Security Schemes
 
-This SDK supports the following security scheme globally:
+This SDK supports the following security schemes globally:
 
-| Name    | Type | Scheme      |
-| ------- | ---- | ----------- |
-| `token` | http | HTTP Bearer |
+| Name     | Type   | Scheme      |
+| -------- | ------ | ----------- |
+| `oauth2` | apiKey | API key     |
+| `token`  | http   | HTTP Bearer |
 
-To authenticate with the API the `token` parameter must be set when initializing the SDK. For example:
+You can set the security parameters through the `setSecurity` function on the `SDKBuilder` when initializing the SDK. The selected scheme will be used by default to authenticate with the API for all operations that support it. For example:
 ```php
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
 use Midday\Midday;
+use Midday\Midday\Models\Components;
 use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
-        'MIDDAY_API_KEY'
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
     )
     ->build();
 
-$request = new Operations\ListTransactionsRequest(
-    cursor: 'eyJpZCI6IjEyMyJ9',
-    sort: [
-        'date',
-        'desc',
-    ],
-    pageSize: 50,
-    q: 'office supplies',
-    categories: [
-        'office-supplies',
-        'travel',
-    ],
-    tags: [
-        'tag-1',
-        'tag-2',
-    ],
-    start: '2024-04-01T00:00:00.000Z',
-    end: '2024-04-30T23:59:59.999Z',
-    accounts: [
-        'account-1',
-        'account-2',
-    ],
-    assignees: [
-        'user-1',
-        'user-2',
-    ],
-    statuses: [
-        'pending',
-        'completed',
-    ],
-    recurring: [
-        'monthly',
-        'annually',
-    ],
-    attachments: Operations\Attachments::Include,
-    amountRange: [
-        100,
-        1000,
-    ],
-    amount: [
-        '150.75',
-        '299.99',
-    ],
-    type: Operations\ListTransactionsType::Expense,
+$request = new Operations\GetOAuthAuthorizationRequest(
+    responseType: Operations\ResponseType::Code,
+    clientId: 'mid_client_abcdef123456789',
+    redirectUri: 'https://myapp.com/callback',
+    scope: 'transactions.read invoices.read',
+    state: 'abc123xyz789_secure-random-state-value-with-sufficient-entropy',
+    codeChallenge: 'E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM',
 );
 
-$response = $sdk->transactions->list(
+$response = $sdk->oAuth->getOAuthAuthorization(
     request: $request
 );
 
@@ -207,7 +140,7 @@ if ($response->object !== null) {
 <details open>
 <summary>Available methods</summary>
 
-### [bankAccounts](docs/sdks/bankaccounts/README.md)
+### [BankAccounts](docs/sdks/bankaccounts/README.md)
 
 * [list](docs/sdks/bankaccounts/README.md#list) - List all bank accounts
 * [create](docs/sdks/bankaccounts/README.md#create) - Create a bank account
@@ -215,7 +148,7 @@ if ($response->object !== null) {
 * [delete](docs/sdks/bankaccounts/README.md#delete) - Delete a bank account
 * [update](docs/sdks/bankaccounts/README.md#update) - Update a bank account
 
-### [customers](docs/sdks/customers/README.md)
+### [Customers](docs/sdks/customers/README.md)
 
 * [list](docs/sdks/customers/README.md#list) - List all customers
 * [create](docs/sdks/customers/README.md#create) - Create customer
@@ -223,42 +156,58 @@ if ($response->object !== null) {
 * [delete](docs/sdks/customers/README.md#delete) - Delete a customer
 * [update](docs/sdks/customers/README.md#update) - Update a customer
 
-### [documents](docs/sdks/documents/README.md)
+### [Documents](docs/sdks/documents/README.md)
 
 * [list](docs/sdks/documents/README.md#list) - List all documents
 * [get](docs/sdks/documents/README.md#get) - Retrieve a document
 * [delete](docs/sdks/documents/README.md#delete) - Delete a document
+* [getPreSignedUrl](docs/sdks/documents/README.md#getpresignedurl) - Generate pre-signed URL for document
 
-### [inbox](docs/sdks/inbox/README.md)
+### [Inbox](docs/sdks/inbox/README.md)
 
 * [list](docs/sdks/inbox/README.md#list) - List all inbox items
 * [get](docs/sdks/inbox/README.md#get) - Retrieve a inbox item
 * [delete](docs/sdks/inbox/README.md#delete) - Delete a inbox item
 * [update](docs/sdks/inbox/README.md#update) - Update a inbox item
+* [getPreSignedUrl](docs/sdks/inbox/README.md#getpresignedurl) - Generate pre-signed URL for inbox attachment
 
-### [invoices](docs/sdks/invoices/README.md)
+### [Invoices](docs/sdks/invoices/README.md)
 
 * [list](docs/sdks/invoices/README.md#list) - List all invoices
+* [create](docs/sdks/invoices/README.md#create) - Create an invoice
 * [getInvoicesPaymentStatus](docs/sdks/invoices/README.md#getinvoicespaymentstatus) - Payment status
 * [summary](docs/sdks/invoices/README.md#summary) - Invoice summary
 * [get](docs/sdks/invoices/README.md#get) - Retrieve a invoice
+* [update](docs/sdks/invoices/README.md#update) - Update an invoice
 * [delete](docs/sdks/invoices/README.md#delete) - Delete a invoice
 
-### [metrics](docs/sdks/metrics/README.md)
+### [Notifications](docs/sdks/notifications/README.md)
 
-* [revenue](docs/sdks/metrics/README.md#revenue) - Revenue metrics
-* [profit](docs/sdks/metrics/README.md#profit) - Profit metrics
-* [burnRate](docs/sdks/metrics/README.md#burnrate) - Burn rate metrics
-* [runway](docs/sdks/metrics/README.md#runway) - Runway metrics
-* [expenses](docs/sdks/metrics/README.md#expenses) - Expense metrics
-* [spending](docs/sdks/metrics/README.md#spending) - Spending metrics
+* [list](docs/sdks/notifications/README.md#list) - List all notifications
+* [updateStatus](docs/sdks/notifications/README.md#updatestatus) - Update notification status
+* [updateAllStatus](docs/sdks/notifications/README.md#updateallstatus) - Update status of all notifications
 
+### [OAuth](docs/sdks/oauth/README.md)
 
-### [search](docs/sdks/search/README.md)
+* [getOAuthAuthorization](docs/sdks/oauth/README.md#getoauthauthorization) - OAuth Authorization Endpoint
+* [postOAuthAuthorization](docs/sdks/oauth/README.md#postoauthauthorization) - OAuth Authorization Decision
+* [postOAuthToken](docs/sdks/oauth/README.md#postoauthtoken) - OAuth Token Exchange
+* [postOAuthRevoke](docs/sdks/oauth/README.md#postoauthrevoke) - OAuth Token Revocation
+
+### [Reports](docs/sdks/reports/README.md)
+
+* [revenue](docs/sdks/reports/README.md#revenue) - Revenue reports
+* [profit](docs/sdks/reports/README.md#profit) - Profit reports
+* [burnRate](docs/sdks/reports/README.md#burnrate) - Burn rate reports
+* [runway](docs/sdks/reports/README.md#runway) - Runway reports
+* [expenses](docs/sdks/reports/README.md#expenses) - Expense reports
+* [spending](docs/sdks/reports/README.md#spending) - Spending reports
+
+### [Search](docs/sdks/search/README.md)
 
 * [search](docs/sdks/search/README.md#search) - Search
 
-### [tags](docs/sdks/tags/README.md)
+### [Tags](docs/sdks/tags/README.md)
 
 * [list](docs/sdks/tags/README.md#list) - List all tags
 * [create](docs/sdks/tags/README.md#create) - Create a new tag
@@ -266,14 +215,14 @@ if ($response->object !== null) {
 * [delete](docs/sdks/tags/README.md#delete) - Delete a tag
 * [update](docs/sdks/tags/README.md#update) - Update a tag
 
-### [teams](docs/sdks/teams/README.md)
+### [Teams](docs/sdks/teams/README.md)
 
 * [list](docs/sdks/teams/README.md#list) - List all teams
 * [get](docs/sdks/teams/README.md#get) - Retrieve a team
 * [update](docs/sdks/teams/README.md#update) - Update a team
 * [members](docs/sdks/teams/README.md#members) - List all team members
 
-### [trackerEntries](docs/sdks/trackerentries/README.md)
+### [TrackerEntries](docs/sdks/trackerentries/README.md)
 
 * [list](docs/sdks/trackerentries/README.md#list) - List all tracker entries
 * [create](docs/sdks/trackerentries/README.md#create) - Create a tracker entry
@@ -281,7 +230,7 @@ if ($response->object !== null) {
 * [delete](docs/sdks/trackerentries/README.md#delete) - Delete a tracker entry
 * [update](docs/sdks/trackerentries/README.md#update) - Update a tracker entry
 
-### [trackerProjects](docs/sdks/trackerprojects/README.md)
+### [TrackerProjects](docs/sdks/trackerprojects/README.md)
 
 * [list](docs/sdks/trackerprojects/README.md#list) - List all tracker projects
 * [create](docs/sdks/trackerprojects/README.md#create) - Create a tracker project
@@ -289,25 +238,26 @@ if ($response->object !== null) {
 * [delete](docs/sdks/trackerprojects/README.md#delete) - Delete a tracker project
 * [update](docs/sdks/trackerprojects/README.md#update) - Update a tracker project
 
-### [trackerTimer](docs/sdks/trackertimer/README.md)
+### [TrackerTimer](docs/sdks/trackertimer/README.md)
 
 * [startTimer](docs/sdks/trackertimer/README.md#starttimer) - Start a timer
 * [stopTimer](docs/sdks/trackertimer/README.md#stoptimer) - Stop a timer
 * [getCurrentTimer](docs/sdks/trackertimer/README.md#getcurrenttimer) - Get current timer
 * [getTimerStatus](docs/sdks/trackertimer/README.md#gettimerstatus) - Get timer status
 
-### [transactions](docs/sdks/transactions/README.md)
+### [Transactions](docs/sdks/transactions/README.md)
 
 * [list](docs/sdks/transactions/README.md#list) - List all transactions
 * [create](docs/sdks/transactions/README.md#create) - Create a transaction
 * [get](docs/sdks/transactions/README.md#get) - Retrieve a transaction
 * [delete](docs/sdks/transactions/README.md#delete) - Delete a transaction
 * [update](docs/sdks/transactions/README.md#update) - Update a transaction
+* [getAttachmentPreSignedUrl](docs/sdks/transactions/README.md#getattachmentpresignedurl) - Generate pre-signed URL for transaction attachment
 * [createMany](docs/sdks/transactions/README.md#createmany) - Bulk create transactions
 * [deleteMany](docs/sdks/transactions/README.md#deletemany) - Bulk delete transactions
 * [updateMany](docs/sdks/transactions/README.md#updatemany) - Bulk update transactions
 
-### [users](docs/sdks/users/README.md)
+### [Users](docs/sdks/users/README.md)
 
 * [get](docs/sdks/users/README.md#get) - Retrieve the current user
 * [update](docs/sdks/users/README.md#update) - Update the current user
@@ -329,11 +279,12 @@ By default an API error will raise a `Errors\APIException` exception, which has 
 | `$rawResponse` | *?\Psr\Http\Message\ResponseInterface*  | The raw HTTP response |
 | `$body`        | *string*                                | The response content  |
 
-When custom error responses are specified for an operation, the SDK may also throw their associated exception. You can refer to respective *Errors* tables in SDK docs for more details on possible exception types for each operation. For example, the `list` method throws the following exceptions:
+When custom error responses are specified for an operation, the SDK may also throw their associated exception. You can refer to respective *Errors* tables in SDK docs for more details on possible exception types for each operation. For example, the `getOAuthAuthorization` method throws the following exceptions:
 
-| Error Type          | Status Code | Content Type |
-| ------------------- | ----------- | ------------ |
-| Errors\APIException | 4XX, 5XX    | \*/\*        |
+| Error Type                                      | Status Code | Content Type     |
+| ----------------------------------------------- | ----------- | ---------------- |
+| Errors\GetOAuthAuthorizationBadRequestException | 400         | application/json |
+| Errors\APIException                             | 4XX, 5XX    | \*/\*            |
 
 ### Example
 
@@ -343,68 +294,38 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
+use Midday\Midday\Models\Components;
+use Midday\Midday\Models\Errors;
 use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
-        'MIDDAY_API_KEY'
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
     )
     ->build();
 
 try {
-    $request = new Operations\ListTransactionsRequest(
-        cursor: 'eyJpZCI6IjEyMyJ9',
-        sort: [
-            'date',
-            'desc',
-        ],
-        pageSize: 50,
-        q: 'office supplies',
-        categories: [
-            'office-supplies',
-            'travel',
-        ],
-        tags: [
-            'tag-1',
-            'tag-2',
-        ],
-        start: '2024-04-01T00:00:00.000Z',
-        end: '2024-04-30T23:59:59.999Z',
-        accounts: [
-            'account-1',
-            'account-2',
-        ],
-        assignees: [
-            'user-1',
-            'user-2',
-        ],
-        statuses: [
-            'pending',
-            'completed',
-        ],
-        recurring: [
-            'monthly',
-            'annually',
-        ],
-        attachments: Operations\Attachments::Include,
-        amountRange: [
-            100,
-            1000,
-        ],
-        amount: [
-            '150.75',
-            '299.99',
-        ],
-        type: Operations\ListTransactionsType::Expense,
+    $request = new Operations\GetOAuthAuthorizationRequest(
+        responseType: Operations\ResponseType::Code,
+        clientId: 'mid_client_abcdef123456789',
+        redirectUri: 'https://myapp.com/callback',
+        scope: 'transactions.read invoices.read',
+        state: 'abc123xyz789_secure-random-state-value-with-sufficient-entropy',
+        codeChallenge: 'E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM',
     );
 
-    $response = $sdk->transactions->list(
+    $response = $sdk->oAuth->getOAuthAuthorization(
         request: $request
     );
 
     if ($response->object !== null) {
         // handle response
     }
+} catch (Errors\GetOAuthAuthorizationBadRequestExceptionThrowable $e) {
+    // handle $e->$container data
+    throw $e;
 } catch (Errors\APIException $e) {
     // handle default exception
     throw $e;
@@ -424,62 +345,28 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
+use Midday\Midday\Models\Components;
 use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setServerURL('https://api.midday.ai')
     ->setSecurity(
-        'MIDDAY_API_KEY'
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
     )
     ->build();
 
-$request = new Operations\ListTransactionsRequest(
-    cursor: 'eyJpZCI6IjEyMyJ9',
-    sort: [
-        'date',
-        'desc',
-    ],
-    pageSize: 50,
-    q: 'office supplies',
-    categories: [
-        'office-supplies',
-        'travel',
-    ],
-    tags: [
-        'tag-1',
-        'tag-2',
-    ],
-    start: '2024-04-01T00:00:00.000Z',
-    end: '2024-04-30T23:59:59.999Z',
-    accounts: [
-        'account-1',
-        'account-2',
-    ],
-    assignees: [
-        'user-1',
-        'user-2',
-    ],
-    statuses: [
-        'pending',
-        'completed',
-    ],
-    recurring: [
-        'monthly',
-        'annually',
-    ],
-    attachments: Operations\Attachments::Include,
-    amountRange: [
-        100,
-        1000,
-    ],
-    amount: [
-        '150.75',
-        '299.99',
-    ],
-    type: Operations\ListTransactionsType::Expense,
+$request = new Operations\GetOAuthAuthorizationRequest(
+    responseType: Operations\ResponseType::Code,
+    clientId: 'mid_client_abcdef123456789',
+    redirectUri: 'https://myapp.com/callback',
+    scope: 'transactions.read invoices.read',
+    state: 'abc123xyz789_secure-random-state-value-with-sufficient-entropy',
+    codeChallenge: 'E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM',
 );
 
-$response = $sdk->transactions->list(
+$response = $sdk->oAuth->getOAuthAuthorization(
     request: $request
 );
 

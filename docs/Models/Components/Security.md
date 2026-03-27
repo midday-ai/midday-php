@@ -5,4 +5,5 @@
 
 | Field              | Type               | Required           | Description        | Example            |
 | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| `token`            | *string*           | :heavy_check_mark: | N/A                | MIDDAY_API_KEY     |
+| `oauth2`           | *?string*          | :heavy_minus_sign: | N/A                |                    |
+| `token`            | *?string*          | :heavy_minus_sign: | N/A                | MIDDAY_API_KEY     |

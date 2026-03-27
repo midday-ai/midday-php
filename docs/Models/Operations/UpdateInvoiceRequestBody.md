@@ -1,0 +1,12 @@
+# UpdateInvoiceRequestBody
+
+Schema for updating an invoice
+
+
+## Fields
+
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     | Example                                                                                         |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `status`                                                                                        | [?Operations\UpdateInvoiceStatusRequest](../../Models/Operations/UpdateInvoiceStatusRequest.md) | :heavy_minus_sign:                                                                              | New status for the invoice                                                                      | paid                                                                                            |
+| `paidAt`                                                                                        | [\DateTime](https://www.php.net/manual/en/class.datetime.php)                                   | :heavy_minus_sign:                                                                              | Timestamp when the invoice was paid (ISO 8601)                                                  | 2024-06-15T12:00:00.000Z                                                                        |
+| `internalNote`                                                                                  | *?string*                                                                                       | :heavy_minus_sign:                                                                              | Internal note for the invoice                                                                   | Payment received via bank transfer                                                              |

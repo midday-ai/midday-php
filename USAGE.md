@@ -5,61 +5,27 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
+use Midday\Midday\Models\Components;
 use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
-        'MIDDAY_API_KEY'
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
     )
     ->build();
 
-$request = new Operations\ListTransactionsRequest(
-    cursor: 'eyJpZCI6IjEyMyJ9',
-    sort: [
-        'date',
-        'desc',
-    ],
-    pageSize: 50,
-    q: 'office supplies',
-    categories: [
-        'office-supplies',
-        'travel',
-    ],
-    tags: [
-        'tag-1',
-        'tag-2',
-    ],
-    start: '2024-04-01T00:00:00.000Z',
-    end: '2024-04-30T23:59:59.999Z',
-    accounts: [
-        'account-1',
-        'account-2',
-    ],
-    assignees: [
-        'user-1',
-        'user-2',
-    ],
-    statuses: [
-        'pending',
-        'completed',
-    ],
-    recurring: [
-        'monthly',
-        'annually',
-    ],
-    attachments: Operations\Attachments::Include,
-    amountRange: [
-        100,
-        1000,
-    ],
-    amount: [
-        '150.75',
-        '299.99',
-    ],
-    type: Operations\ListTransactionsType::Expense,
+$request = new Operations\GetOAuthAuthorizationRequest(
+    responseType: Operations\ResponseType::Code,
+    clientId: 'mid_client_abcdef123456789',
+    redirectUri: 'https://myapp.com/callback',
+    scope: 'transactions.read invoices.read',
+    state: 'abc123xyz789_secure-random-state-value-with-sufficient-entropy',
+    codeChallenge: 'E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM',
 );
 
-$response = $sdk->transactions->list(
+$response = $sdk->oAuth->getOAuthAuthorization(
     request: $request
 );
 

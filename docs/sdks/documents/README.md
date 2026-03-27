@@ -1,5 +1,4 @@
 # Documents
-(*documents*)
 
 ## Overview
 
@@ -8,6 +7,7 @@
 * [list](#list) - List all documents
 * [get](#get) - Retrieve a document
 * [delete](#delete) - Delete a document
+* [getPreSignedUrl](#getpresignedurl) - Generate pre-signed URL for document
 
 ## list
 
@@ -22,11 +22,14 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
+use Midday\Midday\Models\Components;
 use Midday\Midday\Models\Operations;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
-        'MIDDAY_API_KEY'
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
     )
     ->build();
 
@@ -78,10 +81,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
+use Midday\Midday\Models\Components;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
-        'MIDDAY_API_KEY'
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
     )
     ->build();
 
@@ -125,10 +131,13 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Midday\Midday;
+use Midday\Midday\Models\Components;
 
 $sdk = Midday\Midday::builder()
     ->setSecurity(
-        'MIDDAY_API_KEY'
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
     )
     ->build();
 
@@ -158,3 +167,59 @@ if ($response->object !== null) {
 | Error Type          | Status Code         | Content Type        |
 | ------------------- | ------------------- | ------------------- |
 | Errors\APIException | 4XX, 5XX            | \*/\*               |
+
+## getPreSignedUrl
+
+Generate a pre-signed URL for accessing a document. The URL is valid for 60 seconds and allows secure temporary access to the document file.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getDocumentPreSignedUrl" method="post" path="/documents/{id}/presigned-url" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Midday\Midday;
+use Midday\Midday\Models\Components;
+
+$sdk = Midday\Midday::builder()
+    ->setSecurity(
+        new Components\Security(
+            oauth2: '<YOUR_API_KEY_HERE>',
+        )
+    )
+    ->build();
+
+
+
+$response = $sdk->documents->getPreSignedUrl(
+    id: 'b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4',
+    download: true
+
+);
+
+if ($response->object !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                            | Type                                 | Required                             | Description                          | Example                              |
+| ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ |
+| `id`                                 | *string*                             | :heavy_check_mark:                   | N/A                                  | b3b7c1e2-4c2a-4e7a-9c1a-2b7c1e24c2a4 |
+| `download`                           | *?bool*                              | :heavy_minus_sign:                   | N/A                                  | true                                 |
+
+### Response
+
+**[?Operations\GetDocumentPreSignedUrlResponse](../../Models/Operations/GetDocumentPreSignedUrlResponse.md)**
+
+### Errors
+
+| Error Type                                        | Status Code                                       | Content Type                                      |
+| ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
+| Errors\GetDocumentPreSignedUrlBadRequestException | 400                                               | application/json                                  |
+| Errors\GetDocumentPreSignedUrlNotFoundException   | 404                                               | application/json                                  |
+| Errors\GetDocumentPreSignedUrlInternalServerError | 500                                               | application/json                                  |
+| Errors\APIException                               | 4XX, 5XX                                          | \*/\*                                             |
